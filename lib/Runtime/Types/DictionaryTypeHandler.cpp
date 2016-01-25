@@ -1593,7 +1593,7 @@ namespace Js
             // We don't want fixed properties on external objects.  See DynamicObject::ResetObject for more information.
             Assert(!instance->IsExternal() || (flags & PropertyOperation_NonFixedValue) != 0);
 
-            // Even if one (or both?) accessors are the default functions obtained through cannonicalization,
+            // Even if one (or both?) accessors are the default functions obtained through canonicalization,
             // they are still legitimate functions, so it's ok to mark the whole property as fixed.
             newDescriptor.IsFixed = (flags & PropertyOperation_NonFixedValue) == 0 && ShouldFixAccessorProperties();
             if (!isGetterSet || !isSetterSet)
