@@ -38,7 +38,7 @@ enum EditKind
 //  - A vertical move (i,j) -> (i,j+1) represents inserting B[j].
 //  - A diagonal move (i,j) -> (i+1,j+1) represents a match, A[i] == B[j].
 // Each diagonal move represents a match. We want more diagnonal moves. Let diagonal move cost 0, horizontal or
-// vertical move each costs 1. The basic algorithm is a greedy algorthm to find a shortest path from (0,0) to
+// vertical move each costs 1. The basic algorithm is a greedy algorithm to find a shortest path from (0,0) to
 // (lengthA, lengthB).
 //
 // Terms:
