@@ -610,7 +610,7 @@ private:
                 if (tiedToAncestor > 0)
                 {
                     // TODO: For nodes tied to their parents,
-                    // consider avoding matching them to all other nodes of the same label.
+                    // consider avoiding matching them to all other nodes of the same label.
                     // Rather we should only match them with their siblings that share the same parent.
 
                     PNode ancestor1 = comparer.GetAncestor(node1, tiedToAncestor);
