@@ -511,7 +511,7 @@ private:
      */
     HeapPageAllocator<VirtualAllocWrapper>               pageAllocator;
     HeapPageAllocator<PreReservedVirtualAllocWrapper>    preReservedHeapPageAllocator;
-    ArenaAllocator*                                   auxilliaryAllocator;
+    ArenaAllocator*                                   auxiliaryAllocator;
 
     /*
      * Various tracking lists
