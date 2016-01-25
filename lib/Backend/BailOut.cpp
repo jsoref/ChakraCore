@@ -765,7 +765,7 @@ BailOutRecord::RestoreValue(IR::BailOutKind bailOutKind, Js::JavascriptCallStack
             //      bar(a, b, c);
             // } catch(..) {..}
             // and we bailout during bar args evaluation, we recover from args from argoutRestoreAddress, not from caller function frame.
-            // This is beceause try-catch is implemented as a C wrapper, so args will be a different offset from rbp in that case.
+            // This is because try-catch is implemented as a C wrapper, so args will be a different offset from rbp in that case.
             Assert(!isFloat64 && !isInt32 && !isSimd128F4 && !isSimd128I4);
 
             value = *((Js::Var *)(((char *)argoutRestoreAddress) + regSlot * MachPtr));
