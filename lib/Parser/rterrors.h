@@ -203,7 +203,7 @@ RT_ERROR_MSG(JSERR_TypedArray_NeedSource, 5086, "", "Invalid source in typed arr
 RT_ERROR_MSG(JSERR_This_NeedDataView, 5087, "", "'this' is not a DataView object", kjstTypeError, 0)
 RT_ERROR_MSG(JSERR_DataView_NeedArgument, 5088, "Required argument %s in DataView method is not specified", "Invalid arguments in DataView", kjstTypeError, 0)
 RT_ERROR_MSG(JSERR_DataView_InvalidOffset, 5089, "", "DataView operation access beyond specified buffer length",  kjstTypeError, 0)
-RT_ERROR_MSG(JSERR_DataView_InvalidArugment, 5090, "DataView constructor argument %s is invalid", "Invalid arguments in DataView", kjstRangeError, 0)
+RT_ERROR_MSG(JSERR_DataView_InvalidArgument, 5090, "DataView constructor argument %s is invalid", "Invalid arguments in DataView", kjstRangeError, 0)
 
 RT_ERROR_MSG(JSERR_InvalidFunctionSignature, 5091, "The function '%s' has an invalid signature and cannot be called", "invalid function signature", kjstTypeError, 0)
 RT_ERROR_MSG(JSERR_InvalidPropertySiganture, 5092, "The property '%s' has an invalid signature and cannot be accessed", "invalid property signature", kjstTypeError, 0)
