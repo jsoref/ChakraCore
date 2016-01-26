@@ -33,7 +33,7 @@ enum EditKind
 //      EUGENE W. MYERS: An O(ND) Difference Algorithm and Its Variations
 //
 // The idea is that LCS is a dual problem of shortest path in an edit graph. The edit graph is a grid of lengthA
-// columns and lengthB rows. A path starts from (0,0) and moves toward (lenghA, lengthB).
+// columns and lengthB rows. A path starts from (0,0) and moves toward (lengthA, lengthB).
 //  - A horizontal move (i,j) -> (i+1,j) represents deleting A[i].
 //  - A vertical move (i,j) -> (i,j+1) represents inserting B[j].
 //  - A diagonal move (i,j) -> (i+1,j+1) represents a match, A[i] == B[j].
