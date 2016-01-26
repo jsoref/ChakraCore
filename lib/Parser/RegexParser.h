@@ -224,7 +224,7 @@ namespace UnifiedRegex
         //  - inputLim may point to the terminating null in above or before it
         //     - if the later, input is known to be syntactically well-formed so that the parser
         //       will find the natural end of the regex literal before passing inputLim
-        //  - input may conatin nulls before the inputLim
+        //  - input may contain nulls before the inputLim
 
         Node* ParseLiteral
             ( const EncodedChar* input          // non null, null terminated (may contain embedded nulls)
