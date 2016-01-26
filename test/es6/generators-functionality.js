@@ -770,14 +770,14 @@ var tests = [
             var g = gf();
             assert.areEqual({ value: 1, done: false }, g.next(), "First next call should return 1 from try block");
             assert.areEqual({value: 2, done: false }, g.throw(2), "After throwing the yield should happen from the catch block");
-            assert.areEqual({ value: undefined, done: true }, g.next(), "Generator is in comleted state");
+            assert.areEqual({ value: undefined, done: true }, g.next(), "Generator is in completed state");
 
             gf = function* () { try { yield 1; throw 2; } catch (ex) { yield ex; yield 100; } assert.fail("Control should never reach here"); }
             g = gf();
             assert.areEqual({ value: 1, done: false }, g.next(), "First next call should return 1 from try block");
             assert.areEqual({value: 2, done: false }, g.next(), "Second next call should return 2 from the catch block");
             assert.throws(function() { g.throw(new ExpectedException()) }, ExpectedException, "The throw happens before the try block");
-            assert.areEqual({ value: undefined, done: true }, g.next(), "Generator is in comleted state");
+            assert.areEqual({ value: undefined, done: true }, g.next(), "Generator is in completed state");
         }
     },
     {
