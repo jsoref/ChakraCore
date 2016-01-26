@@ -76,7 +76,7 @@ var tests = [
     },
 
     {
-        name: "Map constructor populates the map with key-values pairs from given optional iteratable argument",
+        name: "Map constructor populates the map with key-values pairs from given optional iterable argument",
         body: function () {
             var m = new Map([ ['a', 1], ['b', 2], ['c', 3] ]);
 

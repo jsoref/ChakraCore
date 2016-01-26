@@ -76,7 +76,7 @@ var tests = [
     },
 
     {
-        name: "Set constructor populates the set with values from given optional iteratable argument",
+        name: "Set constructor populates the set with values from given optional iterable argument",
         body: function () {
             var s = new Set([ 'a', 'b', 'c' ]);
 
