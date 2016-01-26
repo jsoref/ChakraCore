@@ -62,7 +62,7 @@ namespace UnifiedRegex
         static const CharCount initLitbufSize = 16;
 
         Js::ScriptContext* scriptContext;
-        // Arena for nodes and items needed only during compliation
+        // Arena for nodes and items needed only during compilation
         ArenaAllocator* ctAllocator;
         // Standard characters using raw encoding character representation (eg char for utf-8)
         StandardChars<EncodedChar>* standardEncodedChars;
