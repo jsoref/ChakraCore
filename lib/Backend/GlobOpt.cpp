@@ -2433,7 +2433,7 @@ GlobOpt::CleanUpValueMaps()
                         deadSymsBv.Set(bucket.value->m_id);
 
                         // Make sure the type sym is added to the dead syms vector as well, because type syms are
-                        // created in backward pass and so their symIds > maxIntitialSymID.
+                        // created in backward pass and so their symIds > maxInitialSymID.
                         if (sym->IsStackSym() && sym->AsStackSym()->HasObjectTypeSym())
                         {
                             deadSymsBv.Set(sym->AsStackSym()->GetObjectTypeSym()->m_id);
@@ -2444,7 +2444,7 @@ GlobOpt::CleanUpValueMaps()
                 else
                 {
                     // Make sure the type sym is added to the dead syms vector as well, because type syms are
-                    // created in backward pass and so their symIds > maxIntitialSymID. Perhaps we could remove
+                    // created in backward pass and so their symIds > maxInitialSymID. Perhaps we could remove
                     // it explicitly here, but would it work alright with the iterator?
                     if (sym->IsStackSym() && sym->AsStackSym()->HasObjectTypeSym())
                     {

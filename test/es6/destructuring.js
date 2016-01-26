@@ -152,8 +152,8 @@ var tests = [
       assert.throws(function () { eval("var [...a = 1] = [];"); },      SyntaxError, "Destructured var array declaration with a rest parameter with a default value throws",   "Unexpected default initializer");
       assert.throws(function () { eval("let [...a = 1] = [];"); },      SyntaxError, "Destructured let array declaration with a rest parameter with a default value throws",   "Unexpected default initializer");
       assert.throws(function () { eval("const [...a = 1] = [];"); },    SyntaxError, "Destructured const array declaration with a rest parameter with a default value throws", "Unexpected default initializer");
-      assert.throws(function () { eval("var a; [...a = 1] = [];"); },   SyntaxError, "Destructured var array assignment with a rest parameter with a default value throws",    "The rest parameter cannot have a default intializer.");
-      assert.throws(function () { eval("let a; [...a = 1] = [];"); },   SyntaxError, "Destructured let array assignment with a rest parameter with a default value throws",    "The rest parameter cannot have a default intializer.");
+      assert.throws(function () { eval("var a; [...a = 1] = [];"); },   SyntaxError, "Destructured var array assignment with a rest parameter with a default value throws",    "The rest parameter cannot have a default initializer.");
+      assert.throws(function () { eval("let a; [...a = 1] = [];"); },   SyntaxError, "Destructured let array assignment with a rest parameter with a default value throws",    "The rest parameter cannot have a default initializer.");
 
       // Nesting
       assert.doesNotThrow(function () { eval("var [[a]] = [[]];"); },    "Destructured var array declaration with nesting does not throw");
