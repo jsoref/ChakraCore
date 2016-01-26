@@ -3876,7 +3876,7 @@ namespace Js
 
         bool isSearchTaggedInt = TaggedInt::Is(search);
         // We need to cast head segment to SparseArraySegment<Var> to have access to GetElement (onSparseArraySegment<T>). Because there are separate overloads of this
-        // virtual method on JavascriptNativeIntArray and JavascripNativeFloatArray, we know this version of this method will only be called for true JavascriptArray, and not for
+        // virtual method on JavascriptNativeIntArray and JavascriptNativeFloatArray, we know this version of this method will only be called for true JavascriptArray, and not for
         // either of the derived native arrays, so the elements of each segment used here must be Vars. Hence, the cast is safe.
         SparseArraySegment<Var>* head = static_cast<SparseArraySegment<Var>*>(GetHead());
         uint32 toIndexTrimmed = toIndex <= head->length ? toIndex : head->length;
@@ -3944,7 +3944,7 @@ namespace Js
         }
 
         // We need to cast head segment to SparseArraySegment<int32> to have access to GetElement (onSparseArraySegment<T>). Because there are separate overloads of this
-        // virtual method on JavascriptNativeIntArray and JavascripNativeFloatArray, we know this version of this method will only be called for  JavascriptNativeIntArray, and not for
+        // virtual method on JavascriptNativeIntArray and JavascriptNativeFloatArray, we know this version of this method will only be called for  JavascriptNativeIntArray, and not for
         // the other two, so the elements of each segment used here must be int32's. Hence, the cast is safe.
 
         SparseArraySegment<int32> * head = static_cast<SparseArraySegment<int32>*>(GetHead());
