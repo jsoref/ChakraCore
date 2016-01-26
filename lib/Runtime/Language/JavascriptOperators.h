@@ -209,7 +209,7 @@ namespace Js
         static BOOL IsUndefinedObject(Var instance);
         static BOOL IsUndefinedObject(Var instance, ScriptContext *scriptContext);
         static BOOL IsUndefinedObject(Var instance, RecyclableObject *libraryUndefined);
-        static BOOL IsUndefinedObject(Var isntance, JavascriptLibrary* library);
+        static BOOL IsUndefinedObject(Var instance, JavascriptLibrary* library);
         static BOOL IsAnyNumberValue(Var instance);
         static BOOL IsIterable(RecyclableObject* instance, ScriptContext* scriptContext);
         static BOOL IsClassConstructor(Var instance);
