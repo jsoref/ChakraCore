@@ -3,7 +3,7 @@
 // Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
 //-------------------------------------------------------------------------------------------------------
 
-// ES6 Genertors functionality tests -- verifies behavior of generator functions
+// ES6 Generators functionality tests -- verifies behavior of generator functions
 
 WScript.LoadScriptFile("..\\UnitTestFramework\\UnitTestFramework.js");
 
@@ -248,7 +248,7 @@ var tests = [
         }
     },
     {
-        name: "Geneartor functions with this reference",
+        name: "Generator functions with this reference",
         body: function () {
             function* gf(a) {
                 yield 1 + a + this.a;
@@ -1063,7 +1063,7 @@ var tests = [
             var g2 = gf2();
             assert.areEqual({value: 1, done: false}, g2.next(), "Get the first yield value from the inner generator");
             assert.areEqual({value: 3, done: true}, g2.return(3), "Returns the passed in value");
-            assert.areEqual({value: undefined, done: true}, g1.next(), "Inner geneartor is in complete state");
+            assert.areEqual({value: undefined, done: true}, g1.next(), "Inner generator is in complete state");
             assert.areEqual({value: undefined, done: true}, g2.next(), "Outer generator is in complete state");
 
             g1 = gf1();
