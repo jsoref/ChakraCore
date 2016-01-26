@@ -597,7 +597,7 @@ var tests = [
                 assert.areEqual(a, undefined, "Nested destructuring - value is present but undefined");
 
                 [[a]=[1]] = [];
-                assert.areEqual(a, 1, "Nested destructuring - value is not present - use defult");
+                assert.areEqual(a, 1, "Nested destructuring - value is not present - use default");
 
                 [[a]=1] = [[]];
                 assert.areEqual(a, undefined, "Nested destructuring - value is present - default is incorrect - does not have @@iterator");
