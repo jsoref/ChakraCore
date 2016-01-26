@@ -358,7 +358,7 @@ namespace Js
         Js::JavascriptMethod DeferredParsingThunk;
         Js::JavascriptMethod DeferredDeserializationThunk;
         Js::JavascriptMethod DispatchDefaultInvoke;
-        Js::JavascriptMethod DispatchProfileInoke;
+        Js::JavascriptMethod DispatchProfileInvoke;
 
         typedef HRESULT (*GetDocumentContextFunction)(
             ScriptContext *pContext,
