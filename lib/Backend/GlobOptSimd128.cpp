@@ -406,7 +406,7 @@ bool GlobOpt::Simd128ValidateIfLaneIndex(const IR::Instr * instr, IR::Opnd * opn
         return true; // not a lane index
     }
 
-    // arg in lanex index pos of operation ?
+    // arg in lane index pos of operation ?
     if (argPos < argPosLo || argPos > argPosHi)
     {
         return true; // not a lane index
