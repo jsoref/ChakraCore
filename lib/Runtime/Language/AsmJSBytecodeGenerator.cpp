@@ -256,7 +256,7 @@ namespace Js
             DefineLabels( );
             EmitAsmJsFunctionBody();
 
-            // Set that the function is asmjsFuntion in functionBody here so that Initialize ExecutionMode call later will check for that and not profile in asmjsMode
+            // Set that the function is asmjsFunction in functionBody here so that Initialize ExecutionMode call later will check for that and not profile in asmjsMode
             functionBody->SetIsAsmJsFunction(true);
             functionBody->SetIsAsmjsMode(true);
 

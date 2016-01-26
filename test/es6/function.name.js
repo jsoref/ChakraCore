@@ -105,7 +105,7 @@ var tests = [
                 "14.5.15 Runtime Semantics: If the class definition included a 'name' static method then that method is not over-written");
              assert.areEqual("name",qux.name.name,"confirm we get the name 'name'");
              assert.areEqual(qux.name , qux.prototype.constructor.name,
-                "confirm qux.prototype.constructor.name is the same functionn as qux.name");
+                "confirm qux.prototype.constructor.name is the same function as qux.name");
              assert.areEqual("Function",qux.constructor.name,"The function constructor should still have the name Function");
 
              var qux = class { constructor(a,b) {} static name() {} };

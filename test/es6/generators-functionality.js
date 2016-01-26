@@ -735,25 +735,25 @@ var tests = [
             var gf = function* () { yield 1; yield 2; yield 3; return 5; }
             var g = gf();
             assert.areEqual({ value: 1, done: false }, g.next(), "First next call should return 1");
-            assert.throws(function() { g.throw(new ExpectedException()); }, ExpectedException, "Throw call is expected to throw the exception out as the funtion is not handling it");
+            assert.throws(function() { g.throw(new ExpectedException()); }, ExpectedException, "Throw call is expected to throw the exception out as the function is not handling it");
             assert.areEqual({ value: undefined, done: true }, g.next(), "Second next call should return undefined as the throw caused a completion of the generator");
 
             gf = function* () { yield 1; }
             g = gf();
-            assert.throws(function() { g.throw(new ExpectedException()); }, ExpectedException, "Throw call is expected to throw the exception out as the funtion is not handling it");
+            assert.throws(function() { g.throw(new ExpectedException()); }, ExpectedException, "Throw call is expected to throw the exception out as the function is not handling it");
             assert.areEqual({ value: undefined, done: true }, g.next(), "Next call after throw should return undefined as the throw caused a completion of the generator");
 
             gf = function* () { yield 1; }
             g = gf();
             assert.areEqual({ value: 1, done: false }, g.next(), "First next call should return 1");
-            assert.throws(function() { g.throw(new ExpectedException()); }, ExpectedException, "Throw call is expected to throw the exception out as the funtion is not handling it");
+            assert.throws(function() { g.throw(new ExpectedException()); }, ExpectedException, "Throw call is expected to throw the exception out as the function is not handling it");
             assert.areEqual({ value: undefined, done: true }, g.next(), "Next call after throw should return undefined as the throw caused a completion of the generator");
 
             gf = function* () { yield 1; yield 2; }
             g = gf();
             assert.areEqual({ value: 1, done: false }, g.next(), "First next call should return 1");
-            assert.throws(function() { g.throw(new ExpectedException()); }, ExpectedException, "Throw call is expected to throw the exception out as the funtion is not handling it");
-            assert.throws(function() { g.throw(new ExpectedException()); }, ExpectedException, "Second Throw call is also expected to throw the exception out as the funtion is not handling it");
+            assert.throws(function() { g.throw(new ExpectedException()); }, ExpectedException, "Throw call is expected to throw the exception out as the function is not handling it");
+            assert.throws(function() { g.throw(new ExpectedException()); }, ExpectedException, "Second Throw call is also expected to throw the exception out as the function is not handling it");
             assert.areEqual({ value: undefined, done: true }, g.next(), "Next call after throw should return undefined as the throw caused a completion of the generator");
 
             gf = function* () { yield 1; }
