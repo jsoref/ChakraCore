@@ -45,12 +45,12 @@
         %(AdditionalIncludeDirectories)
       </AdditionalIncludeDirectories>
 
-      <!-- ======== For Code Covearge ======== -->
+      <!-- ======== For Code Coverage ======== -->
       <Optimization Condition="'$(ENABLE_CODECOVERAGE)'=='true'">Disabled</Optimization>
     </ClCompile>
 
     <Link>
-      <!-- ======== For Code Covearge ======== -->
+      <!-- ======== For Code Coverage ======== -->
       <AdditionalOptions Condition="'$(ENABLE_CODECOVERAGE)'=='true'">%(AdditionalOptions) /DEBUGTYPE:CV,FIXUP</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
