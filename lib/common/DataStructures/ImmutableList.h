@@ -577,7 +577,7 @@ namespace regex
             return WhereInPlace([&](T seen) {return seen != value;});
         }
 
-        // Info:        Return the value from a list with exacly one element. Throw if there are 0 or 2+ elements.
+        // Info:        Return the value from a list with exactly one element. Throw if there are 0 or 2+ elements.
         T ToSingle()
         {
             Js::VerifyCatastrophic(Count()==1);
