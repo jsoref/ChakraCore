@@ -2086,7 +2086,7 @@ namespace Js
     void DictionaryTypeHandlerBase<T>::SetAllPropertiesToUndefined(DynamicObject* instance, bool invalidateFixedFields)
     {
         // The Var for window is reused across navigation. we shouldn't preserve the IsExtensibleFlag when we don't keep
-        // the expandoes. Reset the IsExtensibleFlag in cleanup scenario should be good enough
+        // the expandos. Reset the IsExtensibleFlag in cleanup scenario should be good enough
         // to cover all the preventExtension/Freeze/Seal scenarios.
         // Note that we don't change the flag for keepProperties scenario: the flags should be preserved and that's consistent
         // with other browsers.
