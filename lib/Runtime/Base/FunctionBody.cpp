@@ -7591,7 +7591,7 @@ namespace Js
     {
         // DisableJIT-TODO: Move this to be under if DYNAMIC_PROFILE
 #if ENABLE_NATIVE_CODEGEN
-        // (See also the FunctionBody member written in CaptureDymamicProfileState.)
+        // (See also the FunctionBody member written in CaptureDynamicProfileState.)
         this->savedPolymorphicCacheState = entryPointInfo->GetPendingPolymorphicCacheState();
         this->savedInlinerVersion = entryPointInfo->GetPendingInlinerVersion();
         this->savedImplicitCallsFlags = entryPointInfo->GetPendingImplicitCallFlags();
