@@ -1260,7 +1260,7 @@ namespace Js
     *  - 1 for Date.prototype.toLocaleDateString
     *  - 2 for Date.prototype.toLocaleTimeString
     *  - 3 for Number.prototype.toLocaleString
-    *  - 4 for String.prototype.localeComapre
+    *  - 4 for String.prototype.localeCompare
     */
     Var IntlEngineInterfaceExtensionObject::EntryIntl_RegisterBuiltInFunction(RecyclableObject* function, CallInfo callInfo, ...)
     {
