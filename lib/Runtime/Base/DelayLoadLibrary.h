@@ -112,8 +112,8 @@ namespace Js
             _Outptr_opt_ IMetaDataImport2 **metaDataImport,
             _Out_opt_ mdTypeDef *typeDefToken);
 
-        typedef FNCWRoGetMetaDataFile* PFNCWRoGetMettadataFile;
-        PFNCWRoGetMettadataFile m_pfnRoGetMetadataFile;
+        typedef FNCWRoGetMetaDataFile* PFNCWRoGetMetadataFile;
+        PFNCWRoGetMetadataFile m_pfnRoGetMetadataFile;
 
 
     public:
