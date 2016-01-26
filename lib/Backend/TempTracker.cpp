@@ -101,7 +101,7 @@ TempTrackerBase::AddTransferDependencies(BVSparse<JitArenaAllocator> * bv, SymID
 {
     bv->Set(dstSymID);
 
-    // Add the indirect transfers (always from tempTransferDepencies)
+    // Add the indirect transfers (always from tempTransferDependencies)
     BVSparse<JitArenaAllocator> *dstBVSparse = this->tempTransferDependencies->GetAndClear(dstSymID);
     if (dstBVSparse != nullptr)
     {
