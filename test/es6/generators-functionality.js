@@ -827,7 +827,7 @@ var tests = [
             assert.areEqual({ value: 1, done: false }, g.next(), "First next call should return 1 from the inner try block");
             assert.areEqual({ value: 2, done: false }, g.throw(3), "Throw causes the inner finally block to be executed");
             assert.areEqual({ value: 3, done: false }, g.next(), "Second next call should return 3 from the catch block");
-            assert.throws(function() { g.throw(new ExpectedException()) }, ExpectedException, "Second throw causses an exception fromt he catch block");
+            assert.throws(function() { g.throw(new ExpectedException()) }, ExpectedException, "Second throw causes an exception fromt he catch block");
             assert.areEqual({ value: undefined, done: true }, g.next(), "Method execution has finished");
 
             gf = function* () { try { try { yield 1; throw 100; } finally { yield 2; yield 100; } } finally { yield 3; } }
