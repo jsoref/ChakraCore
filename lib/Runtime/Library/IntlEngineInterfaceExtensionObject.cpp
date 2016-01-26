@@ -1236,7 +1236,7 @@ namespace Js
     }
 
     /*
-    *   This function returns defaultTimeZone for host's current environement as specified in
+    *   This function returns defaultTimeZone for host's current environment as specified in
     *   DefaultTimeZone () section of ECMA-402 dated June 2015.
     */
     Var IntlEngineInterfaceExtensionObject::EntryIntl_GetDefaultTimeZone(RecyclableObject* function, CallInfo callInfo, ...)
