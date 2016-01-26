@@ -45,7 +45,7 @@ enum PNodeFlags : ushort
     // Statment nodes.
     fpnExplicitSimicolon                     = 0x0010, // statment terminated by an explicit semicolon
     fpnAutomaticSimicolon                    = 0x0020, // statment terminated by an automatic semicolon
-    fpnMissingSimicolon                      = 0x0040, // statment missing terminating semicolon, and is not applicable for automatic semicolon insersion
+    fpnMissingSimicolon                      = 0x0040, // statment missing terminating semicolon, and is not applicable for automatic semicolon insertion
     fpnDclList                               = 0x0080, // statment is a declaration list
     fpnSyntheticNode                         = 0x0100, // node is added by the parser or does it represent user code
     fpnIndexOperator                         = 0x0200, // dot operator is an optimization of an index operator
