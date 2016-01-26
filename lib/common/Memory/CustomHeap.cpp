@@ -417,7 +417,7 @@ void Heap::FreeDecommittedLargeObjects()
     {
         VerboseHeapTrace(L"Decommitting large object at address 0x%p of size %u\n", allocation.address, allocation.size);
 
-        this->ReleaseDecommited(allocation.address, allocation.GetPageCount(), allocation.largeObjectAllocation.segment);
+        this->ReleaseDecommitted(allocation.address, allocation.GetPageCount(), allocation.largeObjectAllocation.segment);
 
         largeObjectIter.RemoveCurrent(this->auxiliaryAllocator);
     }
@@ -849,7 +849,7 @@ void Heap::FreeDecommittedBuckets()
     Assert(inDtor);
     FOREACH_DLISTBASE_ENTRY_EDITING(Page, page, &this->decommittedPages, iter)
     {
-        this->TrackDecommitedPages(page.address, 1, page.segment);
+        this->TrackDecommittedPages(page.address, 1, page.segment);
         iter.RemoveCurrent(this->auxiliaryAllocator);
     }
     NEXT_DLISTBASE_ENTRY_EDITING;
