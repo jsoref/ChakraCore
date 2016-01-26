@@ -227,7 +227,7 @@ namespace Js
     //
     // Description of flags
     //
-    const wchar_t* const FlagDecriptions[FlagCount + 1] =
+    const wchar_t* const FlagDescriptions[FlagCount + 1] =
     {
     #define FLAG(type, name, description, ...) L##description,
     #include "ConfigFlagsList.h"
@@ -829,7 +829,7 @@ namespace Js
                 Assert(false);
                 __assume(false);
             }
-            printf("%ls\n", FlagDecriptions[i]);
+            printf("%ls\n", FlagDescriptions[i]);
         }
     }
 
