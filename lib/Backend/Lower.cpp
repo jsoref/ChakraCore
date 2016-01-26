@@ -14906,7 +14906,7 @@ Lowerer::GenerateFastStringLdElem(IR::Instr * ldElem, IR::LabelInstr * labelHelp
     // Load the string buffer and make sure it is not null
     //  MOV bufferOpnd, [baseOpnd + offset(m_pszValue)]
     //  TEST bufferOpnd, bufferOpnd
-    //  JEQ $lableHelper
+    //  JEQ $labelHelper
     indirOpnd = IR::IndirOpnd::New(baseOpnd, offsetof(Js::JavascriptString, m_pszValue), TyMachPtr, this->m_func);
 
     InsertMove(bufferOpnd, indirOpnd, ldElem);
