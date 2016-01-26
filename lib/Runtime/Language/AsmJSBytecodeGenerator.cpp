@@ -118,7 +118,7 @@ namespace Js
         FunctionBody *funcBody = mFunction->GetFuncBody();
         funcBody->CreateConstantTable();
         Var* table = (Var*)funcBody->GetConstTable();
-        table += AsmJsFunctionMemory::RequiredVarConstants - 1; // we do -1 here as the VarConstant count is erobased calculation
+        table += AsmJsFunctionMemory::RequiredVarConstants - 1; // we do -1 here as the VarConstant count is zero-based calculation
 
         int* intTable = (int*)table;
         // int Return Register
