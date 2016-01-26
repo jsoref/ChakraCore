@@ -425,7 +425,7 @@ namespace Js
             Js::Var args[] = { scriptContext->GetLibrary()->GetUndefined(), scriptContext->GetLibrary()->GetEngineInterfaceObject(), initType };
             Js::CallInfo callInfo(Js::CallFlags_Value, _countof(args));
 
-            // Clear disable implict call bit as initialization code doesn't have any side effect
+            // Clear disable implicit call bit as initialization code doesn't have any side effect
             Js::ImplicitCallFlags saveImplicitCallFlags = scriptContext->GetThreadContext()->GetImplicitCallFlags();
             scriptContext->GetThreadContext()->ClearDisableImplicitFlags();
             JavascriptFunction::CallRootFunctionInScript(function, Js::Arguments(callInfo, args));
