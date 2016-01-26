@@ -153,9 +153,9 @@ struct PnArrLit : PnUni
 {
     uint count;
     uint spreadCount;
-    BYTE arrayOfTaggedInts:1;     // indicates that array initialzer nodes are all tagged ints
-    BYTE arrayOfInts:1;           // indicates that array initialzer nodes are all ints
-    BYTE arrayOfNumbers:1;        // indicates that array initialzer nodes are all numbers
+    BYTE arrayOfTaggedInts:1;     // indicates that array initializer nodes are all tagged ints
+    BYTE arrayOfInts:1;           // indicates that array initializer nodes are all ints
+    BYTE arrayOfNumbers:1;        // indicates that array initializer nodes are all numbers
     BYTE hasMissingValues:1;
 };
 
