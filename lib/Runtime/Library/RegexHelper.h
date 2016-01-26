@@ -112,7 +112,7 @@ namespace Js
         static bool IsResultNotUsed(CallFlags flags);
 
     private:
-        static void AppendSubString(ScriptContext* scriptContext, JavascriptArray* ary, CharCount& numElems, JavascriptString* input, CharCount startInclusize, CharCount endExclusive);
+        static void AppendSubString(ScriptContext* scriptContext, JavascriptArray* ary, CharCount& numElems, JavascriptString* input, CharCount startInclusive, CharCount endExclusive);
         template <bool updateHistory>
         static Var RegexMatchImpl(ScriptContext* scriptContext, JavascriptRegExp* regularExpression, JavascriptString* input, bool noResult, void *const stackAllocationPointer = nullptr);
         static Var RegexExecImpl(ScriptContext* scriptContext, JavascriptRegExp* regularExpression, JavascriptString* input, bool noResult, void *const stackAllocationPointer = nullptr);
