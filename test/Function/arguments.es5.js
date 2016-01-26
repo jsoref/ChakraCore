@@ -483,7 +483,7 @@ var tests = {
       assert.areEqual(expected, actual, mkerr("wrong descriptor - initial"));
 
       // Try to modify/re-configure
-      // Note: do not change value here as it causes different code path than excersized by identified issue.
+      // Note: do not change value here as it causes different code path than exercised by identified issue.
       Object.defineProperty(arguments, 0, { enumerable: false });
       Object.defineProperty(arguments, 0, { writable: false });
       Object.defineProperty(arguments, 0, { configurable: false });
