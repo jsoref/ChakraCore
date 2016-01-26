@@ -1104,7 +1104,7 @@ namespace Js
     *  - Format as Percent.
     *  - Format as Number.
     *  - If significant digits are present, format using the significant digts;
-    *  - Otherwise format using minimumFractionDigits, maximuimFractionDigits, minimumIntegerDigits
+    *  - Otherwise format using minimumFractionDigits, maximumFractionDigits, minimumIntegerDigits
     */
     Var IntlEngineInterfaceExtensionObject::EntryIntl_FormatNumber(RecyclableObject* function, CallInfo callInfo, ...)
     {
