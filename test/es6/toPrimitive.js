@@ -117,7 +117,7 @@ var tests = [
 
         }
     },
-// In ScriptLangugageVersion6 the ActiveXObject constructor is removed and is unable to be used for this test. Disabling until different object type can be found
+// In ScriptLanguageVersion6 the ActiveXObject constructor is removed and is unable to be used for this test. Disabling until different object type can be found
 // that can be used instead.
 //    {
 //       name: "Object toPrimitve must return  ECMA Type else TypeError",
