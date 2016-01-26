@@ -42,7 +42,7 @@ namespace Js
 
         Var jsExceptionObject;
 
-        // Used for synchronizing with ProbeMananger
+        // Used for synchronizing with ProbeManager
         ulong debugSessionNumber;
 
         uint32  tmpRegCount; // Mentions the temp register count for the current statement (this will be used to determine if SetNextStatement can be applied)
