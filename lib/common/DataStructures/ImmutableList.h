@@ -861,7 +861,7 @@ namespace regex
 
         void Append(T newEntry)
         {
-            // Genreate new chunk
+            // Generate new chunk
             if (currentIndex == arraySize)
             {
                 T * newChunk = AllocatorNewArray(TAllocator, allocator, T, arraySize + chunkSize);
@@ -980,7 +980,7 @@ namespace regex
                 Js::Throw::OutOfMemory();
             }
 
-            // Genreate new chunk
+            // Generate new chunk
             if (currentIndex == chunkSize)
             {
                 StringChunk *newChunk = new StringChunk();
