@@ -1306,7 +1306,7 @@ var tests = {
     test_306_i: {
         name: "Set a property while prototype has a getter",
         body: function() {
-            var propName = "306"; // Without quote it fails on array. Coverred by 310_i
+            var propName = "306"; // Without quote it fails on array. Covered by 310_i
             try {
                 Object.defineProperty(Object.prototype, propName, {
                     get: function () { return 100; },
