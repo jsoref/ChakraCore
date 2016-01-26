@@ -586,7 +586,7 @@ namespace Js
         static Var GetSpecies(RecyclableObject* constructor, ScriptContext* scriptContext);
 
     private:
-        static BOOL RelationalComparsionHelper(Var aLeft, Var aRight, ScriptContext* scriptContext, bool leftFirst, bool undefinedAs);
+        static BOOL RelationalComparisonHelper(Var aLeft, Var aRight, ScriptContext* scriptContext, bool leftFirst, bool undefinedAs);
 
         template <typename ArrayType>
         static void ObjectToNativeArray(ArrayType* arrayObject,
