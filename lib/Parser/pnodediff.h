@@ -37,14 +37,14 @@ enum EditKind
 //  - A horizontal move (i,j) -> (i+1,j) represents deleting A[i].
 //  - A vertical move (i,j) -> (i,j+1) represents inserting B[j].
 //  - A diagonal move (i,j) -> (i+1,j+1) represents a match, A[i] == B[j].
-// Each diagonal move represents a match. We want more diagnonal moves. Let diagonal move cost 0, horizontal or
+// Each diagonal move represents a match. We want more diagonal moves. Let diagonal move cost 0, horizontal or
 // vertical move each costs 1. The basic algorithm is a greedy algorithm to find a shortest path from (0,0) to
 // (lengthA, lengthB).
 //
 // Terms:
-//  diagonal k: The diagnonal where x-y==k.
+//  diagonal k: The diagonal where x-y==k.
 //  d-path: A path starting from (0,0) with d number of horizontal or vertical moves. Or, its length is d (note
-//          that each horizontal/vertical move costs 1, diagnonal move costs 0).
+//          that each horizontal/vertical move costs 1, diagonal move costs 0).
 //
 //          0-path can only move along and end on diagonal 0.
 //          1-path can only end on diagonal -1 or 1.
