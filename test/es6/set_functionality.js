@@ -334,7 +334,7 @@ var tests = [
             assert.isTrue(set.has("hello"), "Set contains string");
             assert.isTrue(set.has("hel" + "lo"), "Set contains string even if differnt reference identity");
             assert.isTrue(set.has(8589934592), "Set contains 64 bit integer value");
-            assert.isTrue(set.has(65536 + 8589869056), "Set contains 64 bit integer value even if calculated diffrently");
+            assert.isTrue(set.has(65536 + 8589869056), "Set contains 64 bit integer value even if calculated differently");
 
             set.add(-0);
             assert.isTrue(set.has(-0), "Set contains -0");

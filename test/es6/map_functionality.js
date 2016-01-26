@@ -400,7 +400,7 @@ var tests = [
             assert.isTrue(map.has("hello"), "Map contains string");
             assert.isTrue(map.has("hel" + "lo"), "Map contains string even if differnt reference identity");
             assert.isTrue(map.has(8589934592), "Map contains 64 bit integer value");
-            assert.isTrue(map.has(65536 + 8589869056), "Map contains 64 bit integer value even if calculated diffrently");
+            assert.isTrue(map.has(65536 + 8589869056), "Map contains 64 bit integer value even if calculated differently");
 
             map.set(-0, 5);
             assert.isTrue(map.has(-0), "Map contains -0");
