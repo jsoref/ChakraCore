@@ -9973,7 +9973,7 @@ Case0:
         if (Configuration::Global.flags.ForceES5Array)
         {
             // There's a bad interaction with the jitted code for native array creation here.
-            // forcees5array doesn't interact well with native arrays
+            // ForceES5Array doesn't interact well with native arrays
             if (PHASE_OFF1(NativeArrayPhase))
             {
                 GetTypeHandler()->ConvertToTypeWithItemAttributes(this);
