@@ -2968,7 +2968,7 @@ bool NativeCodeGenerator::TryAggressiveInlining(Js::FunctionBody *const topFunct
 
     if (!inlineeFunctionBody->GetProfiledCallSiteCount())
     {
-        // Nothing to inline. See this as fully inlineable function.
+        // Nothing to inline. See this as fully inlinable function.
         return true;
     }
 
