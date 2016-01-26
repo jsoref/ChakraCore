@@ -62,7 +62,7 @@ namespace Js
         {
             return Pos_InvalidInt64;
         }
-        else if (T1 < -9223372036854775808.0) // -9223372036854775808 is double value corresponsing to Neg_InvalidInt64.
+        else if (T1 < -9223372036854775808.0) // -9223372036854775808 is double value corresponding to Neg_InvalidInt64.
         {
             // TODO: Remove this temp workaround.
             // This is to walk around CRT issue (Win8 404170): there is a band of values near/less than negative overflow
