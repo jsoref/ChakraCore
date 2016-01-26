@@ -1518,7 +1518,7 @@ var tests = [
             g1.return = function() { return 10; }
             g2 = gf2();
             g2.next();
-            assert.throws(function () { g2['throw']({value : 1}); }, TypeError, "A TypeError is thrown if the inner result of iteractor close is not an object", "Object expected");
+            assert.throws(function () { g2['throw']({value : 1}); }, TypeError, "A TypeError is thrown if the inner result of iterator close is not an object", "Object expected");
         }
     },
     {
