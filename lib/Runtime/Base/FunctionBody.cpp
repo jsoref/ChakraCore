@@ -2271,7 +2271,7 @@ namespace Js
             this->m_isEval = isEval;
             this->m_isDynamicFunction = isDynamicFunction;
 
-            // It would have been better if we detect and reject large source buffer eariler before parsing
+            // It would have been better if we detect and reject large source buffer earlier before parsing
             size_t cbMin = node->sxFnc.cbMin;
             size_t lengthInBytes = node->sxFnc.LengthInBytes();
             if (cbMin > UINT_MAX || lengthInBytes > UINT_MAX)
