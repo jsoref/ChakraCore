@@ -398,7 +398,7 @@ var tests = [
             assert.isTrue(map.has(3.14159), "Map contains floating point number");
             assert.isTrue(map.has(3.0 + 0.14159), "Map contains floating point number even if calculated differently");
             assert.isTrue(map.has("hello"), "Map contains string");
-            assert.isTrue(map.has("hel" + "lo"), "Map contains string even if differnt reference identity");
+            assert.isTrue(map.has("hel" + "lo"), "Map contains string even if different reference identity");
             assert.isTrue(map.has(8589934592), "Map contains 64 bit integer value");
             assert.isTrue(map.has(65536 + 8589869056), "Map contains 64 bit integer value even if calculated differently");
 
