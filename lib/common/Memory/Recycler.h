@@ -488,7 +488,7 @@ struct CollectionParam
     CollectionFlags flags;
     bool finishOnly;
     bool repeat;
-    bool priorityBoostConcurentSweepOverride;
+    bool priorityBoostConcurrentSweepOverride;
     bool domCollect;
     int timeDiff;
     size_t uncollectedAllocBytes;
@@ -916,7 +916,7 @@ private:
     // Once the concurrent thread starts, it sets this to false,
     // and when the concurrent thread exits, it sets this to true.
     bool concurrentThreadExited;
-    bool disableConcurentThreadExitedCheck;
+    bool disableConcurrentThreadExitedCheck;
     bool isProcessingTrackedObjects;
     bool hasIncompletedDoCollect;
 
@@ -1390,7 +1390,7 @@ public:
 
 #if DBG
     void SetDisableThreadAccessCheck();
-    void SetDisableConcurentThreadExitedCheck();
+    void SetDisableConcurrentThreadExitedCheck();
     void CheckAllocExternalMark() const;
     BOOL IsFreeObject(void * candidate);
     BOOL IsReentrantState() const;
