@@ -1065,7 +1065,7 @@ private:
         BOOL IsNumericPropertyId(PropertyId propertyId, uint32* value);
 
         void RegisterWeakReferenceDictionary(JsUtil::IWeakReferenceDictionary* weakReferenceDictionary);
-        void ResetWeakReferenceDicitionaryList() { weakReferenceDictionaryList.Reset(); }
+        void ResetWeakReferenceDictionaryList() { weakReferenceDictionaryList.Reset(); }
 
         BOOL ReserveStaticTypeIds(__in int first, __in int last);
         TypeId ReserveTypeIds(int count);
