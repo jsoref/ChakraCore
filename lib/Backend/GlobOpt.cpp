@@ -7010,7 +7010,7 @@ GlobOpt::ValueNumberDst(IR::Instr **pInstr, Value *src1Val, Value *src2Val)
             "Creator of this instruction should have set the type");
         // fall-through
     case Js::OpCode::Coerse_StrOrRegex:
-        // We don't set the ValyueType of src1 for Coerse_StrOrRegex, hence skip the ASSERT
+        // We don't set the ValueType of src1 for Coerse_StrOrRegex, hence skip the ASSERT
         if (this->IsLoopPrePass() || src1ValueInfo == nullptr || !src1ValueInfo->IsString())
         {
             break;
