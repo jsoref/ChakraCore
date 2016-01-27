@@ -52,7 +52,7 @@ enum PNodeFlags : ushort
     fpnJumbStatement                         = 0x0400, // break or continue that was removed by error recovery
 
     // Unary/Binary nodes
-    fpnCanFlattenConcatExpr                  = 0x0800, // the result of the binary operation can particpate in concat N
+    fpnCanFlattenConcatExpr                  = 0x0800, // the result of the binary operation can participate in concat N
 
     // Potentially overlapping transitor flags
     // These flags are set and cleared during a single node traversal and their values can be used in other node traversals.
