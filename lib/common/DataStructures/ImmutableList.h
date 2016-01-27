@@ -39,7 +39,7 @@ namespace regex
         }
 
         // Info:        Return a list with the given value appended to this one <Note this modifies existing list>
-        //              It is requred that the tail passed is empty if this is empty list otherwise its the last node of this list
+        //              It is required that the tail passed is empty if this is empty list otherwise its the last node of this list
         // Parameters:  value - the value to append
         //              tail - last node of the new list
         ImmutableList<T> * Append(T value, ArenaAllocator * a, ImmutableList<T> **tail)
@@ -90,7 +90,7 @@ namespace regex
         }
 
         // Info:        Return the list which is resulted by appending array to the current list<Note this modifies existing list>
-        //              It is requred that the tail passed is empty if this is empty list otherwise its the last node of this list
+        //              It is required that the tail passed is empty if this is empty list otherwise its the last node of this list
         // Parameters:  arr - the array to append
         //              count - the elements in the array
         //              tail - last node of the new list
