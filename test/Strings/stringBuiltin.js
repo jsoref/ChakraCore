@@ -196,15 +196,14 @@ WScript.Echo (a);
 //st = ss.search(/\d{2,4}/);
 //WScript.Echo("ss.search(\/\\d{2,4}):  " + st);
 
-WScript.Echo("Test : var ss = new String(\"AAAAAAAAAAbbbbbbbbbb\");");
-var ss = new String("AAAAAAAAAAbbbbbbbbbb");
+WScript.Echo("Test : var ss = new String();");
+var ss = new String();
 
 var st = ss.toLowerCase();
 WScript.Echo("ss.toLowerCase():  " + st);
 
 WScript.Echo("Test big string");
-ss = new String("AAAAAAAAAAbbbbbbbbbbAAAAAAAAAAbbbbbbbbbbAAAAAAAAAAbbbbbbbbbbAAAAAAAAAAbbbbbbbbbbAAAAAAAAAAbbbbbbbbbbAAAAAAAAAAbbbbbbbbbb" +
-"AAAAAAAAAAbbbbbbbbbbAAAAAAAAAAbbbbbbbbbbAAAAAAAAAAbbbbbbbbbbAAAAAAAAAAbbbbbbbbbbAAAAAAAAAAbbbbbbbbbbAAAAAAAAAAbbbbbbbbbb");
+ss = new String();
 
 st = ss.toUpperCase();
 WScript.Echo("ss.toUpperCase():  " + st);
