@@ -54,7 +54,7 @@ enum PNodeFlags : ushort
     // Unary/Binary nodes
     fpnCanFlattenConcatExpr                  = 0x0800, // the result of the binary operation can participate in concat N
 
-    // Potentially overlapping transitor flags
+    // Potentially overlapping traversal flags
     // These flags are set and cleared during a single node traversal and their values can be used in other node traversals.
     fpnMemberReference                       = 0x1000, // The node is a member reference symbol
     fpnCapturesSyms                          = 0x2000, // The node is a statement (or contains a sub-statement)
