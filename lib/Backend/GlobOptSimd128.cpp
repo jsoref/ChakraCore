@@ -305,7 +305,7 @@ GlobOpt::Simd128DoTypeSpecLoadStore(IR::Instr *instr, const Value *src1Val, cons
         indexOpnd = instr->GetDst()->AsIndirOpnd()->GetIndexOpnd();
         valueOpnd = instr->GetSrc1();
 
-        // St(arr, index, value). Make sure value can be Simd128 type-spec'ed
+        // St(arr, index, value). Make sure value can be Simd128 type-spec'd
         doTypeSpec = doTypeSpec && Simd128CanTypeSpecOpnd(FindValue(valueOpnd->AsRegOpnd()->m_sym)->GetValueInfo()->Type(), simdFuncSignature->args[2]);
     }
     else

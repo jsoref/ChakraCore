@@ -20459,7 +20459,7 @@ GlobOpt::KillStateForGeneratorYield()
     GlobOptBlockData* globOptData = &this->currentBlock->globOptData;
 
     /*
-    TODO[generators][ianhall]: Do a ToVar on any typespec'ed syms before the bailout so that we can enable typespec in generators without bailin having to restore typespec'ed values
+    TODO[generators][ianhall]: Do a ToVar on any typespec'd syms before the bailout so that we can enable typespec in generators without bailin having to restore typespec'ed values
     FOREACH_BITSET_IN_SPARSEBV(symId, globOptData->liveInt32Syms)
     {
         this->ToVar(instr, , this->currentBlock, , );
