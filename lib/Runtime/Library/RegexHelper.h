@@ -39,7 +39,7 @@ namespace Js
             , bool isSticky
             , JavascriptRegExp* regularExpression
             , JavascriptString* lastInput
-            , UnifiedRegex::GroupInfo lastSuccessfullMatch
+            , UnifiedRegex::GroupInfo lastSuccessfulMatch
             , UnifiedRegex::GroupInfo lastActualMatch
             , bool updateRegex
             , bool updateCtor
@@ -49,13 +49,13 @@ namespace Js
             , bool isGlobal
             , bool isSticky
             , JavascriptRegExp* regularExpression
-            , UnifiedRegex::GroupInfo lastSuccessfullMatch
+            , UnifiedRegex::GroupInfo lastSuccessfulMatch
             , UnifiedRegex::GroupInfo lastActualMatch );
         static void PropagateLastMatchToCtor
             ( ScriptContext* scriptContext
             , JavascriptRegExp* regularExpression
             , JavascriptString* lastInput
-            , UnifiedRegex::GroupInfo lastSuccessfullMatch
+            , UnifiedRegex::GroupInfo lastSuccessfulMatch
             , bool useSplitPattern );
 
         static bool GetInitialOffset(bool isGlobal, bool isSticky, JavascriptRegExp* regularExpression, CharCount inputLength, CharCount& offset);
