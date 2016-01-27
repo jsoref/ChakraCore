@@ -591,7 +591,7 @@ namespace Js
         void ResetIntlObject();
         void EnsureIntlObjectReady();
         template <class Fn>
-        void InitializeIntlForProtototypes(Fn fn);
+        void InitializeIntlForPrototypes(Fn fn);
         void InitializeIntlForStringPrototype();
         void InitializeIntlForDatePrototype();
         void InitializeIntlForNumberPrototype();

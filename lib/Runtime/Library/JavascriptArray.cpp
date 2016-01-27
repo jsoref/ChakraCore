@@ -3515,7 +3515,7 @@ namespace Js
         return fromIndex;
     }
 
-    // includesAlgorithm specifies to follow ES7 Array.prototoype.includes semantics instead of Array.prototype.indexOf
+    // includesAlgorithm specifies to follow ES7 Array.prototype.includes semantics instead of Array.prototype.indexOf
     // Differences
     //    1. Returns boolean true or false value instead of the search hit index
     //    2. Follows SameValueZero algorithm instead of StrictEquals
@@ -3583,12 +3583,12 @@ namespace Js
             {
                 if (includesAlgorithm)
                 {
-                    //Array.prorotype.includes
+                    //Array.prototype.includes
                     return (index == -1)? falseValue : trueValue;
                 }
                 else
                 {
-                    //Array.prorotype.indexOf
+                    //Array.prototype.indexOf
                     return JavascriptNumber::ToVar(index, scriptContext);
                 }
             }
@@ -3892,12 +3892,12 @@ namespace Js
             }
             else if (includesAlgorithm && JavascriptConversion::SameValueZero(element, search))
             {
-                //Array.prototoype.includes
+                //Array.prototype.includes
                 return i;
             }
             else if (JavascriptOperators::StrictEqual(element, search, scriptContext))
             {
-                //Array.prototoype.indexOf
+                //Array.prototype.indexOf
                 return i;
             }
         }

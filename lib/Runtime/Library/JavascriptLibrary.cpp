@@ -4747,7 +4747,7 @@ namespace Js
         {
             intlExtension->InjectIntlLibraryCode(scriptContext, intlObject, IntlInitializationType::Intl);
         };
-        IntlObject->GetLibrary()->InitializeIntlForProtototypes(intlInitializer);
+        IntlObject->GetLibrary()->InitializeIntlForPrototypes(intlInitializer);
     }
 
     void JavascriptLibrary::InitializeIntlForStringPrototype()
@@ -4756,7 +4756,7 @@ namespace Js
         {
             intlExtension->InjectIntlLibraryCode(scriptContext, intlObject, IntlInitializationType::StringPrototype);
         };
-        InitializeIntlForProtototypes(stringPrototypeInitializer);
+        InitializeIntlForPrototypes(stringPrototypeInitializer);
     }
 
     void JavascriptLibrary::InitializeIntlForDatePrototype()
@@ -4765,7 +4765,7 @@ namespace Js
         {
             intlExtension->InjectIntlLibraryCode(scriptContext, intlObject, IntlInitializationType::DatePrototype);
         };
-        InitializeIntlForProtototypes(datePrototypeInitializer);
+        InitializeIntlForPrototypes(datePrototypeInitializer);
     }
 
     void JavascriptLibrary::InitializeIntlForNumberPrototype()
@@ -4774,11 +4774,11 @@ namespace Js
         {
             intlExtension->InjectIntlLibraryCode(scriptContext, intlObject, IntlInitializationType::NumberPrototype);
         };
-        InitializeIntlForProtototypes(numberPrototypeInitializer);
+        InitializeIntlForPrototypes(numberPrototypeInitializer);
     }
 
     template <class Fn>
-    void JavascriptLibrary::InitializeIntlForProtototypes(Fn fn)
+    void JavascriptLibrary::InitializeIntlForPrototypes(Fn fn)
     {
         ScriptContext* scriptContext = this->IntlObject->GetScriptContext();
         if (scriptContext->VerifyAlive())  // Can't initialize if scriptContext closed, will need to run script
