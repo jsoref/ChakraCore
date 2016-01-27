@@ -6466,7 +6466,7 @@ LowererMD::GenerateNumberAllocation(IR::RegOpnd * opndDst, IR::Instr * instrInse
     // arg1 = allocator
     this->LoadHelperArgument(instrInsert, m_lowerer->LoadScriptContextValueOpnd(instrInsert, ScriptContextValue::ScriptContextNumberAllocator));
 
-    // dst = Call AllocUninitalizedNumber
+    // dst = Call AllocUninitializedNumber
     IR::Instr * instrCall = IR::Instr::New(Js::OpCode::Call, opndDst,
         IR::HelperCallOpnd::New(IR::HelperAllocUninitializedNumber, this->m_func), this->m_func);
     instrInsert->InsertBefore(instrCall);
