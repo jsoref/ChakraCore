@@ -554,7 +554,7 @@ private:
         //    The comparer defines the distance [0..1] between two nodes and it can do so by analyzing
         //    the node structure and value. The comparer can tune the distance specifically for each node kind.
         //    We first try to match nodes of the same labels to the exactly matching or almost matching counterparts.
-        //    The we keep increasing the threashold and keep adding matches.
+        //    Then we keep increasing the threashold and keep adding matches.
         for (int label = 0; label < labelCount; label++)
         {
             if (nodes1[label] && nodes2[label])
