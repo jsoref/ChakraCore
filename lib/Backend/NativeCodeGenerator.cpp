@@ -1159,7 +1159,7 @@ NativeCodeGenerator::CheckCodeGen(Js::ScriptFunction * function)
         // Job was not yet processed
         // originalEntryPoint is the last known good entry point for the function body. Here we verify that
         // it either corresponds with this codegen episode (identified by function->entryPointIndex) of the function body
-        // or one that was scheduled after. In the latter case orginalEntryPoint will get updated if and when
+        // or one that was scheduled after. In the latter case originalEntryPoint will get updated if and when
         // that last episode completes successfully.
         Assert(functionBody->GetDefaultEntryPointInfo() == function->GetEntryPointInfo() &&
             (
