@@ -21218,7 +21218,7 @@ Lowerer::LowerNewScopeSlots(IR::Instr * instr, bool doStackSlots)
     }
     else
     {
-        // Just generate all the assignment in loop of loopUnroolCount and the rest as straight line code
+        // Just generate all the assignment in loop of loopUnrollCount and the rest as straight line code
         //
         //      lea currOpnd, [dst + sizeof(Var) * (loopAssignCount + Js::ScopeSlots::FirstSlotIndex - loopUnrollCount)];
         //      mov [currOpnd + loopUnrollCount + leftOverAssignCount - 1] , undefinedOpnd
