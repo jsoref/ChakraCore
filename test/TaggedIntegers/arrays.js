@@ -23,7 +23,7 @@ verify(arr1.length,536870912,id++, "\"Testing Array of length 2^29 \"");
 var arr2=new Array(536870913)
 verify(arr2.length, 536870913, id++,"\"Testing Array of length 2^29+1 \"");
 
-// Test Case 3:Tetsing an array of length 2^29 -1 (One less than the max length of the tagged integer)
+// Test Case 3:Testing an array of length 2^29 -1 (One less than the max length of the tagged integer)
 
 var arr3=new Array(536870911)
 verify(arr3.length, 536870911, id++,"\"Testing Array of length 2^29-1 \"");
