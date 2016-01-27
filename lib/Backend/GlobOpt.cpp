@@ -7138,7 +7138,7 @@ GlobOpt::ValueNumberDst(IR::Instr **pInstr, Value *src1Val, Value *src2Val)
         if(!this->IsLoopPrePass())
         {
             // We cannot transfer value if the field hasn't been copy prop'd because we don't generate
-            // an implicit call bailout between those values if we don't have "live fields" unnless, we are hoisting the field.
+            // an implicit call bailout between those values if we don't have "live fields" unless, we are hoisting the field.
             PropertySym *propertySym = instr->GetSrc1()->AsSymOpnd()->m_sym->AsPropertySym();
             StackSym * fieldHoistSym;
             Loop * loop = this->FindFieldHoistStackSym(this->currentBlock->loop, propertySym->m_id, &fieldHoistSym, instr);
