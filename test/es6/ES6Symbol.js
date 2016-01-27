@@ -545,9 +545,9 @@ var tests = [
             Object.defineProperty(o, sym, { value: 'some value' } );
 
             assert.areEqual('some value', o[sym], "Property keyed off symbol and set via Object.defineProperty should be reachable by the same symbol");
-            assert.areEqual(undefined, o['sym'], "defineProperty does not create a propery based on symbol name");
-            assert.areEqual(undefined, o[''], "defineProperty does not create a propery based on symbol description");
-            assert.areEqual(undefined, o[sym.toString()], "defineProperty does not create a propery based on symbol toString() value");
+            assert.areEqual(undefined, o['sym'], "defineProperty does not create a property based on symbol name");
+            assert.areEqual(undefined, o[''], "defineProperty does not create a property based on symbol description");
+            assert.areEqual(undefined, o[sym.toString()], "defineProperty does not create a property based on symbol toString() value");
         }
     },
     {
@@ -573,8 +573,8 @@ var tests = [
             assert.areEqual(undefined, o['s2'], "defineProperties does not create a property based on symbol name");
             assert.areEqual(undefined, o['symbol 1'], "defineProperties does not create a property based on symbol description");
             assert.areEqual(undefined, o['symbol 2'], "defineProperties does not create a property based on symbol description");
-            assert.areEqual(undefined, o[s1.toString()], "defineProperty does not create a propery based on symbol toString() value");
-            assert.areEqual(undefined, o[s2.toString()], "defineProperty does not create a propery based on symbol toString() value");
+            assert.areEqual(undefined, o[s1.toString()], "defineProperty does not create a property based on symbol toString() value");
+            assert.areEqual(undefined, o[s2.toString()], "defineProperty does not create a property based on symbol toString() value");
         }
     },
     {
@@ -599,8 +599,8 @@ var tests = [
             assert.areEqual(undefined, o['s2'], "Object.create does not create a property based on symbol name");
             assert.areEqual(undefined, o['symbol 1'], "Object.create does not create a property based on symbol description");
             assert.areEqual(undefined, o['symbol 2'], "Object.create does not create a property based on symbol description");
-            assert.areEqual(undefined, o[s1.toString()], "Object.create does not create a propery based on symbol toString() value");
-            assert.areEqual(undefined, o[s2.toString()], "Object.create does not create a propery based on symbol toString() value");
+            assert.areEqual(undefined, o[s1.toString()], "Object.create does not create a property based on symbol toString() value");
+            assert.areEqual(undefined, o[s2.toString()], "Object.create does not create a property based on symbol toString() value");
         }
     },
     {
