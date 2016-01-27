@@ -414,7 +414,7 @@ bool GlobOpt::Simd128ValidateIfLaneIndex(const IR::Instr * instr, IR::Opnd * opn
 
     // It is a lane index ...
 
-    // Arg is Int constant (literal or const prop'ed) ?
+    // Arg is Int constant (literal or const prop'd) ?
     if (!opnd->IsIntConstOpnd())
     {
         return false;
