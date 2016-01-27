@@ -2618,7 +2618,7 @@ namespace Js
 
         bool InstallProbe(int offset);
         bool UninstallProbe(int offset);
-        bool ProbeAtOffset(int offsest, OpCode* pOriginalOpcode);
+        bool ProbeAtOffset(int offset, OpCode* pOriginalOpcode);
 
         FunctionBody * Clone(ScriptContext *scriptContext, uint sourceIndex = Js::Constants::InvalidSourceIndex);
 
