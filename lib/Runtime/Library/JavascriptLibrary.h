@@ -953,7 +953,7 @@ namespace Js
             return (BuiltInFlags)JavascriptLibrary::LibraryFunctionFlags[index];
         }
         static BuiltinFunction GetBuiltInInlineCandidateId(Js::OpCode opCode);
-        static BuiltInArgSpecizationType GetBuiltInArgType(BuiltInFlags flags, BuiltInArgShift argGroup);
+        static BuiltInArgSpecializationType GetBuiltInArgType(BuiltInFlags flags, BuiltInArgShift argGroup);
         static bool IsTypeSpecRequired(BuiltInFlags flags)
         {
             return GetBuiltInArgType(flags, BuiltInArgShift::BIAS_Src1) || GetBuiltInArgType(flags, BuiltInArgShift::BIAS_Src2) || GetBuiltInArgType(flags, BuiltInArgShift::BIAS_Dst);

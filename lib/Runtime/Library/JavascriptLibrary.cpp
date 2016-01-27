@@ -3642,8 +3642,8 @@ namespace Js
         }
 
         Js::BuiltInFlags builtInFlags = JavascriptLibrary::GetFlagsForBuiltIn(index);
-        Js::BuiltInArgSpecizationType dstType = Js::JavascriptLibrary::GetBuiltInArgType(builtInFlags, Js::BuiltInArgShift::BIAS_Dst);
-        bool isFloatFunc = dstType == Js::BuiltInArgSpecizationType::BIAST_Float;
+        Js::BuiltInArgSpecializationType dstType = Js::JavascriptLibrary::GetBuiltInArgType(builtInFlags, Js::BuiltInArgShift::BIAS_Dst);
+        bool isFloatFunc = dstType == Js::BuiltInArgSpecializationType::BIAST_Float;
         return isFloatFunc;
     }
 
@@ -6280,11 +6280,11 @@ namespace Js
 
     // Parses given flags and arg kind (dst or src1, or src2) returns the type the arg must be type-specialized to.
     // static
-    BuiltInArgSpecizationType JavascriptLibrary::GetBuiltInArgType(BuiltInFlags flags, BuiltInArgShift argKind)
+    BuiltInArgSpecializationType JavascriptLibrary::GetBuiltInArgType(BuiltInFlags flags, BuiltInArgShift argKind)
     {
         Assert(argKind == BuiltInArgShift::BIAS_Dst || BuiltInArgShift::BIAS_Src1 || BuiltInArgShift::BIAS_Src2);
 
-        BuiltInArgSpecizationType type = static_cast<BuiltInArgSpecizationType>(
+        BuiltInArgSpecializationType type = static_cast<BuiltInArgSpecializationType>(
             (flags >> argKind) &              // Shift-out everything to the right of start of interesting area.
             ((1 << Js::BIAS_ArgSize) - 1));   // Mask-out everything to the left of interesting area.
 
