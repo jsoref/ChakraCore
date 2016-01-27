@@ -4547,7 +4547,7 @@ void AssignRegisters(ParseNode *pnode, ByteCodeGenerator *byteCodeGenerator)
 
                 if (pnodeName->nop == knopVarDecl && pnodeName->sxVar.sym != nullptr)
                 {
-                    // Unlike in CheckFuncAssignment, we don't have check if there is an interleaving
+                    // Unlike in CheckFuncAssignment, we don't check for interleaving
                     // dynamic scope ('with') here, because we also generate direct assignment for
                     // function decl's names
 
