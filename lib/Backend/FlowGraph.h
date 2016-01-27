@@ -665,7 +665,7 @@ public:
         BVSparse<JitArenaAllocator> *inductionVariablesUsedAfterLoop;
         InductionVariableChangeInfoMap *inductionVariableChangeInfoMap;
         InductionVariableOpndPerUnrollMap *inductionVariableOpndPerUnrollMap;
-        // This assumes that all memop operation use the same index and has the same length
+        // This assumes that all memop operation use the same index and have the same length
         // Temporary map to reuse existing startIndexOpnd while emitting
         // 0 = !increment & !alreadyChanged, 1 = !increment & alreadyChanged, 2 = increment & !alreadyChanged, 3 = increment & alreadyChanged
         IR::RegOpnd* startIndexOpndCache[4];
