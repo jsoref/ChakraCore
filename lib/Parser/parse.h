@@ -164,7 +164,7 @@ public:
     // as 2 three byte sequences instead of 4 bytes as required UTF-8. It also is is loss-less conversion of invalid UTF-16 sequences.
     // This is important in Javascript because Javascript engines are required not report invalid UTF-16 sequences and to consider
     // the UTF-16 characters pre-canonicalization. Converting this UTF-16 with invalid sequences to valid UTF-8 and back would cause
-    // all invalid UTF-16 sequences to be replace by one or more Unicode replacement characters (0xFFFD), losing the original
+    // all invalid UTF-16 sequences to be replaced by one or more Unicode replacement characters (0xFFFD), losing the original
     // invalid sequences.
     HRESULT ParseCesu8Source(__out ParseNodePtr* parseTree, LPCUTF8 pSrc, size_t length, ULONG grfsrc, CompileScriptException *pse,
         Js::LocalFunctionId * nextFunctionId, SourceContextInfo * sourceContextInfo);
