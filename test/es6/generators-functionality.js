@@ -1119,7 +1119,7 @@ var tests = [
             var gf3 = function* () { yield* g2; }
             var g3 = gf3();
             assert.areEqual({value: 1, done: false}, g3.next(), "Yield 1 from the inner generator");
-            assert.throws(function () { g3.throw(2); }, 2, "Even thogh the inner generator handles the throw the result from it is ignored");
+            assert.throws(function () { g3.throw(2); }, 2, "Even though the inner generator handles the throw the result from it is ignored");
             assert.areEqual({value: 3, done: false}, g1.next(), "First generator handled the exception so it is not in complete state yet");
             assert.areEqual({value: undefined, done: true}, g2.next(), "Second generator does not handle the exception so it is in complete state");
             assert.areEqual({value: undefined, done: true}, g3.next(), "Third generator also does not handle the exception so it is in complete state");
