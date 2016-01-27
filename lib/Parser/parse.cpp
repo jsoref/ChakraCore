@@ -8921,13 +8921,13 @@ LEndSwitch:
         {
             if (pnode)
             {
-                pnode->grfpn |= PNodeFlags::fpnExplicitSimicolon;
+                pnode->grfpn |= PNodeFlags::fpnExplicitSemicolon;
             }
             m_pscan->Scan();
         }
         else if (pnode)
         {
-            pnode->grfpn |= PNodeFlags::fpnAutomaticSimicolon;
+            pnode->grfpn |= PNodeFlags::fpnAutomaticSemicolon;
         }
 
         break;
@@ -9357,11 +9357,11 @@ LNeedTerminator:
         {
         case tkSColon:
             m_pscan->Scan();
-            if (pnode!= nullptr) pnode->grfpn |= PNodeFlags::fpnExplicitSimicolon;
+            if (pnode!= nullptr) pnode->grfpn |= PNodeFlags::fpnExplicitSemicolon;
             break;
         case tkEOF:
         case tkRCurly:
-            if (pnode!= nullptr) pnode->grfpn |= PNodeFlags::fpnAutomaticSimicolon;
+            if (pnode!= nullptr) pnode->grfpn |= PNodeFlags::fpnAutomaticSemicolon;
             break;
         default:
             if (!m_pscan->FHadNewLine())
@@ -9370,7 +9370,7 @@ LNeedTerminator:
             }
             else
             {
-                if (pnode!= nullptr) pnode->grfpn |= PNodeFlags::fpnAutomaticSimicolon;
+                if (pnode!= nullptr) pnode->grfpn |= PNodeFlags::fpnAutomaticSemicolon;
             }
             break;
         }
