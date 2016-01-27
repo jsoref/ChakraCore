@@ -206,7 +206,7 @@ RT_ERROR_MSG(JSERR_DataView_InvalidOffset, 5089, "", "DataView operation access 
 RT_ERROR_MSG(JSERR_DataView_InvalidArgument, 5090, "DataView constructor argument %s is invalid", "Invalid arguments in DataView", kjstRangeError, 0)
 
 RT_ERROR_MSG(JSERR_InvalidFunctionSignature, 5091, "The function '%s' has an invalid signature and cannot be called", "invalid function signature", kjstTypeError, 0)
-RT_ERROR_MSG(JSERR_InvalidPropertySiganture, 5092, "The property '%s' has an invalid signature and cannot be accessed", "invalid property signature", kjstTypeError, 0)
+RT_ERROR_MSG(JSERR_InvalidPropertySignature, 5092, "The property '%s' has an invalid signature and cannot be accessed", "invalid property signature", kjstTypeError, 0)
 
 RT_ERROR_MSG(JSERR_InvalidRTCPropertyValueIn, 5093, "The runtimeclass %s that has Windows.Foundation.IPropertyValue as default interface is not supported as input parameter type", "invalid input parameter type", kjstTypeError, 0)
 RT_ERROR_MSG(JSERR_RTCInvalidRTCPropertyValueOut, 5094, "The object with interface Windows.Foundation.IPropertyValue that has runtimeclass name %s is not supported as out parameter", "invalid output parameter", kjstTypeError, 0)
