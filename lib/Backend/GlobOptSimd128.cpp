@@ -93,7 +93,7 @@ Value **pDstVal
         instr->m_func->GetScriptContext()->GetThreadContext()->GetSimdFuncSignatureFromOpcode(instr->m_opcode, simdFuncSignature);
         // type-spec logic
 
-        // special handling for load/sotre
+        // special handling for load/store
         // OptArraySrc will type-spec the array and the index. We type-spec the value here.
         if (Js::IsSimd128Load(instr->m_opcode))
         {
