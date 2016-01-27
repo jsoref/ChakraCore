@@ -1035,7 +1035,7 @@ var tests = [
         }
     },
     {
-        name: "Return and throw apis arguments are propogated on yield*",
+        name: "Return and throw apis arguments are propagated on yield*",
         body: function () {
             x = 0;
             var simpleIterator = CreateIterable(simpleNextFunc, simpleReturnFunc, null);
@@ -1072,8 +1072,8 @@ var tests = [
             var g3 = gf3();
             assert.areEqual({value: 1, done: false}, g3.next(), "Get the first yield value from the inner generator");
             assert.areEqual({value: 3, done: true}, g3.return(3), "Returns the passed in value");
-            assert.areEqual({value: undefined, done: true}, g1.next(), "Return gets propogated to the lowest level");
-            assert.areEqual({value: undefined, done: true}, g2.next(), "Return gets propogated to the second level also");
+            assert.areEqual({value: undefined, done: true}, g1.next(), "Return gets propagated to the lowest level");
+            assert.areEqual({value: undefined, done: true}, g2.next(), "Return gets propagated to the second level also");
             assert.areEqual({value: undefined, done: true}, g3.next(), "Return completes the first level of generator also");
         }
     },
@@ -1086,8 +1086,8 @@ var tests = [
             var g2 = gf2();
             assert.areEqual({value: 1, done: false}, g2.next(), "Get the first yield value from the inner generator");
             assert.throws(function () { g2.throw(new ExpectedException()); }, ExpectedException, "Throw comes out of the generator loop as nobody handles it");
-            assert.areEqual({value: undefined, done: true}, g1.next(), "Throw gets propogated to the lowest level");
-            assert.areEqual({value: undefined, done: true}, g2.next(), "Throw gets propogated to the top level also");
+            assert.areEqual({value: undefined, done: true}, g1.next(), "Throw gets propagated to the lowest level");
+            assert.areEqual({value: undefined, done: true}, g2.next(), "Throw gets propagated to the top level also");
 
             g1 = gf1();
             g2 = gf2();
@@ -1095,8 +1095,8 @@ var tests = [
             var g3 = gf3();
             assert.areEqual({value: 1, done: false}, g3.next(), "Get the first yield value from the inner generator");
             assert.throws(function () { g3.throw(new ExpectedException()); }, ExpectedException, "Throw comes out of the generator loop as nobody handles it");
-            assert.areEqual({value: undefined, done: true}, g1.next(), "Throw gets propogated to the lowest level");
-            assert.areEqual({value: undefined, done: true}, g2.next(), "Throw gets propogated to the second level also");
+            assert.areEqual({value: undefined, done: true}, g1.next(), "Throw gets propagated to the lowest level");
+            assert.areEqual({value: undefined, done: true}, g2.next(), "Throw gets propagated to the second level also");
             assert.areEqual({value: undefined, done: true}, g3.next(), "Throw completes the first level of generator also");
         }
     },
@@ -1273,7 +1273,7 @@ var tests = [
         }
     },
     {
-        name: "Exceptions from inner iterator are popogated",
+        name: "Exceptions from inner iterator are propagated",
         body: function () {
             var gf1 = function* () {
                 try {
@@ -1470,7 +1470,7 @@ var tests = [
                 try {
                     global.g.throw(100);
                 } catch (e) {
-                    assert.areEqual(200, e.value, "Throw call on the generator object created on a different context should should propogate the inner throw result");
+                    assert.areEqual(200, e.value, "Throw call on the generator object created on a different context should should propagate the inner throw result");
                 }
             }
         }
@@ -1503,7 +1503,7 @@ var tests = [
             g1.return = function() { closed = true; return {done: true}; }
             g2 = gf2();
             g2.next();
-            assert.throws(function() { g2['throw'](new ExpectedException()) }, ExpectedException, "Throw is propogated back to the caller");
+            assert.throws(function() { g2['throw'](new ExpectedException()) }, ExpectedException, "Throw is propagated back to the caller");
             assert.isTrue(closed, "When throw method is not defined on the iterator IteratorClose is called");
 
             g1 = gf1();
@@ -1511,7 +1511,7 @@ var tests = [
             g1.return = function() {  throw new ExpectedException(); }
             g2 = gf2();
             g2.next();
-            assert.throws(function () { g2['throw']({value : 1}); }, ExpectedException, "Inner exceptions from IteratorClose are propogated");
+            assert.throws(function () { g2['throw']({value : 1}); }, ExpectedException, "Inner exceptions from IteratorClose are propagated");
 
             g1 = gf1();
             g1.throw = undefined,
