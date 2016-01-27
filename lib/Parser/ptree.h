@@ -282,7 +282,7 @@ public:
     void SetHasReferenceableBuiltInArguments(bool set = true) { SetFlags(kFunctionHasReferenceableBuiltInArguments, set); }
     void SetHasSuperReference(bool set = true) { SetFlags(kFunctionHasSuperReference, set); }
     void SetHasDirectSuper(bool set = true) { SetFlags(kFunctionHasDirectSuper, set); }
-    void SetHasNewTargetReferene(bool set = true) { SetFlags(kFunctionHasNewTargetReference, set); }
+    void SetHasNewTargetReference(bool set = true) { SetFlags(kFunctionHasNewTargetReference, set); }
     void SetHasThisStmt(bool set = true) { SetFlags(kFunctionHasThisStmt, set); }
     void SetHasWithStmt(bool set = true) { SetFlags(kFunctionHasWithStmt, set); }
     void SetIsAccessor(bool set = true) { SetFlags(kFunctionIsAccessor, set); }

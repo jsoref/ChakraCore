@@ -4674,7 +4674,7 @@ void AssignRegisters(ParseNode *pnode, ByteCodeGenerator *byteCodeGenerator)
 
         if (nonLambdaFunc != func || (func->IsGlobalFunction() && (byteCodeGenerator->GetFlags() & fscrEval)))
         {
-            nonLambdaFunc->root->sxFnc.SetHasNewTargetReferene();
+            nonLambdaFunc->root->sxFnc.SetHasNewTargetReference();
             nonLambdaFunc->AssignNewTargetRegister();
             nonLambdaFunc->SetIsNewTargetLexicallyCaptured();
             nonLambdaFunc->GetBodyScope()->SetHasLocalInClosure(true);
@@ -4705,7 +4705,7 @@ void AssignRegisters(ParseNode *pnode, ByteCodeGenerator *byteCodeGenerator)
             {
                 func->AssignNewTargetRegister();
 
-                nonLambdaFunc->root->sxFnc.SetHasNewTargetReferene();
+                nonLambdaFunc->root->sxFnc.SetHasNewTargetReference();
                 nonLambdaFunc->AssignNewTargetRegister();
                 nonLambdaFunc->SetIsNewTargetLexicallyCaptured();
                 nonLambdaFunc->AssignUndefinedConstRegister();
