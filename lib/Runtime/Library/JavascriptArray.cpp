@@ -2966,7 +2966,7 @@ namespace Js
                     {
                         // This is a special case for spreadable objects. We do not pre-calculate the length
                         // in EntryConcat like we do with Arrays because a getProperty on an object Length
-                        // is observable. The result is we have to check for overflows seperately for
+                        // is observable. The result is we have to check for overflows separately for
                         // spreadable objects and promote to a bigger index type when we find them.
                         ConcatArgs<BigIndex>(pDestArray, remoteTypeIds, args, scriptContext, idxArg, idxDest, /*firstPromotedItemIsSpreadable*/true, length);
                         return;
