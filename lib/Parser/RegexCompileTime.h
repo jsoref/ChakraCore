@@ -550,7 +550,7 @@ namespace UnifiedRegex
         enum CompilationScheme
         {
             BeginEnd,     // Protect assertion with begin/end instructions
-            Succ,         // Assertion will always succeeed, without binding groups
+            Succ,         // Assertion will always succeed, without binding groups
             Fail          // Assertion will always fail
         };
 
