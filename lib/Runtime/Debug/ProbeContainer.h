@@ -54,7 +54,7 @@ namespace Js
         // Used when the throw is internal and engine does not want to be broken at exception.
         bool isThrowInternal;
 
-        // This variabled will be set true when we don't want to check for debug script engine being initialized.
+        // This variable will be set true when we don't want to check for debug script engine being initialized.
         bool forceBypassDebugEngine;
 
         bool isPrimaryBrokenToDebuggerContext;
