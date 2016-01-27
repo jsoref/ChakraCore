@@ -7,7 +7,7 @@
 
 WScript.LoadScriptFile("..\\UnitTestFramework\\UnitTestFramework.js");
 
-function VerfiyToPropertyKey(key) {
+function VerifyToPropertyKey(key) {
     var obj = {};
 
     assert.isFalse(obj.hasOwnProperty(key), "Object#hasOwnProperty uses ToPropertyKey. Initially we don't have the property.");
@@ -843,7 +843,7 @@ var tests = [
             var sym = Symbol('sym');
             var symbol_object = Object(sym);
 
-            VerfiyToPropertyKey(symbol_object);
+            VerifyToPropertyKey(symbol_object);
         }
     },
     {
@@ -859,7 +859,7 @@ var tests = [
                 }
             };
 
-            VerfiyToPropertyKey(tostring_object);
+            VerifyToPropertyKey(tostring_object);
         }
     },
     {
@@ -874,7 +874,7 @@ var tests = [
                 }
             };
 
-            VerfiyToPropertyKey(valueof_object);
+            VerifyToPropertyKey(valueof_object);
         }
     },
     {
