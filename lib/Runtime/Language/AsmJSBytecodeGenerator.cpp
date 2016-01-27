@@ -621,7 +621,7 @@ namespace Js
             throw AsmJsCompilationException( L"Variable declaration must happen at the top of the function" );
             break;
         case knopDot:
-            // To handle expr.signMask for now, until Bools are suppored.
+            // To handle expr.signMask for now, until Bools are supported.
             return EmitDotExpr(pnode);
         default:
             throw AsmJsCompilationException( L"Unhandled parse opcode for asm.js" );
