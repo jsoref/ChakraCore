@@ -1481,7 +1481,7 @@ NativeCodeGenerator::UpdateQueueForDebugMode()
 
     // If we're going to debug mode, drain the job processors queue of
     // all jobs belonging this native code generator
-    // JobProcesed will be called for existing jobs, and in debug mode
+    // JobProcessed will be called for existing jobs, and in debug mode
     // that method will simply add them back to the NativeCodeGen's queue
     Processor()->RemoveManager(this);
 
