@@ -550,11 +550,11 @@ private:
         //    Thus we require labels of children tied to a parent to be preceded by all their possible parent labels.
         //
         // 2) Rather than defining function equal in terms of constants f and t, which are hard to get right,
-        //    we try to match multiple times with different threashold for node distance.
+        //    we try to match multiple times with different threshold for node distance.
         //    The comparer defines the distance [0..1] between two nodes and it can do so by analyzing
         //    the node structure and value. The comparer can tune the distance specifically for each node kind.
         //    We first try to match nodes of the same labels to the exactly matching or almost matching counterparts.
-        //    Then we keep increasing the threashold and keep adding matches.
+        //    Then we keep increasing the threshold and keep adding matches.
         for (int label = 0; label < labelCount; label++)
         {
             if (nodes1[label] && nodes2[label])
