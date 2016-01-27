@@ -158,10 +158,10 @@ namespace Js
     }
 
     bool
-    Phases::IsEnabled(Phase phase, uint soruceContextId, Js::LocalFunctionId functionId)
+    Phases::IsEnabled(Phase phase, uint sourceContextId, Js::LocalFunctionId functionId)
     {
         return  this->phaseList[(int)phase].valid &&
-                this->phaseList[(int)phase].range.InRange(SourceFunctionNode(soruceContextId, functionId));
+                this->phaseList[(int)phase].range.InRange(SourceFunctionNode(sourceContextId, functionId));
     }
 
     bool
