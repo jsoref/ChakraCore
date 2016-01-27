@@ -2326,7 +2326,7 @@ struct ForceLeafAllocator<RecyclerNonLeafAllocator>
 
 #define RECYCLER_PROFILE_EXEC_BEGIN2(recycler, phase1, phase2) if (recycler->profiler != nullptr) { recycler->profiler->Begin(phase1); recycler->profiler->Begin(phase2);}
 #define RECYCLER_PROFILE_EXEC_END2(recycler, phase1, phase2) if (recycler->profiler != nullptr) { recycler->profiler->End(phase1); recycler->profiler->End(phase2);}
-#define RECYCLER_PROFILE_EXEC_CHANGE(recydler, phase1, phase2) if  (recycler->profiler != nullptr) { recycler->profiler->End(phase1); recycler->profiler->Begin(phase2); }
+#define RECYCLER_PROFILE_EXEC_CHANGE(recycler, phase1, phase2) if  (recycler->profiler != nullptr) { recycler->profiler->End(phase1); recycler->profiler->Begin(phase2); }
 #define RECYCLER_PROFILE_EXEC_BACKGROUND_BEGIN(recycler, phase) if (recycler->backgroundProfiler != nullptr) { recycler->backgroundProfiler->Begin(phase); }
 #define RECYCLER_PROFILE_EXEC_BACKGROUND_END(recycler, phase) if (recycler->backgroundProfiler != nullptr) { recycler->backgroundProfiler->End(phase); }
 
@@ -2337,7 +2337,7 @@ struct ForceLeafAllocator<RecyclerNonLeafAllocator>
 #define RECYCLER_PROFILE_EXEC_END(recycler, phase)
 #define RECYCLER_PROFILE_EXEC_BEGIN2(recycler, phase1, phase2)
 #define RECYCLER_PROFILE_EXEC_END2(recycler, phase1, phase2)
-#define RECYCLER_PROFILE_EXEC_CHANGE(recydler, phase1, phase2)
+#define RECYCLER_PROFILE_EXEC_CHANGE(recycler, phase1, phase2)
 #define RECYCLER_PROFILE_EXEC_BACKGROUND_BEGIN(recycler, phase)
 #define RECYCLER_PROFILE_EXEC_BACKGROUND_END(recycler, phase)
 #define RECYCLER_PROFILE_EXEC_THREAD_BEGIN(background, recycler, phase)
