@@ -160,7 +160,7 @@ public:
 
     HRESULT ValidateSyntax(LPCUTF8 pszSrc, size_t encodedCharCount, bool isGenerator, bool isAsync, CompileScriptException *pse, void (Parser::*validateFunction)());
 
-    // Should be called when the UTF-8 source was produced from UTF-16. This is really CESU-8 source in that it encodes surragate pairs
+    // Should be called when the UTF-8 source was produced from UTF-16. This is really CESU-8 source in that it encodes surrogate pairs
     // as 2 three byte sequences instead of 4 bytes as required UTF-8. It also is is loss-less conversion of invalid UTF-16 sequences.
     // This is important in Javascript because Javascript engines are required not report invalid UTF-16 sequences and to consider
     // the UTF-16 characters pre-canonicalization. Converting this UTF-16 with invalid sequences to valid UTF-8 and back would cause
