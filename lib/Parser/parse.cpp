@@ -4648,7 +4648,7 @@ void Parser::ParseTopLevelDeferredFunc(ParseNodePtr pnodeFnc, ParseNodePtr pnode
     }
     else
     {
-        ParseStmtList<false>(nullptr, nullptr, SM_DeferedParse, true /* isSourceElementList */);
+        ParseStmtList<false>(nullptr, nullptr, SM_DeferredParse, true /* isSourceElementList */);
     }
 
     pnodeFnc->ichLim = m_pscan->IchLimTok();
@@ -5031,7 +5031,7 @@ void Parser::ParseNestedDeferredFunc(ParseNodePtr pnodeFnc, bool fLambda, bool *
             m_ppnodeVar = &m_currentNodeDeferredFunc->sxFnc.pnodeVars;
         }
 
-        ParseStmtList<false>(nullptr, nullptr, SM_DeferedParse, true /* isSourceElementList */, detectStrictModeOn);
+        ParseStmtList<false>(nullptr, nullptr, SM_DeferredParse, true /* isSourceElementList */, detectStrictModeOn);
 
         ChkCurTokNoScan(tkRCurly, ERRnoRcurly);
     }
@@ -10375,7 +10375,7 @@ HRESULT Parser::ParseFunctionInBackground(ParseNodePtr pnodeFnc, ParseContext *p
         // Process a sequence of statements/declarations
         if (topLevelDeferred)
         {
-            ParseStmtList<false>(nullptr, nullptr, SM_DeferedParse, true);
+            ParseStmtList<false>(nullptr, nullptr, SM_DeferredParse, true);
         }
         else
         {
