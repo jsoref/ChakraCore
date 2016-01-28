@@ -177,7 +177,7 @@ enum FncFlags
     kFunctionCallsEval                          = 1 << 2, // function uses eval
     kFunctionUsesArguments                      = 1 << 3, // function uses arguments
     kFunctionHasHeapArguments                   = 1 << 4, // function's "arguments" escape the scope
-    kFunctionHasReferencableBuiltInArguments    = 1 << 5, // the built-in 'arguments' object is referenceable in the function
+    kFunctionHasReferenceableBuiltInArguments   = 1 << 5, // the built-in 'arguments' object is referenceable in the function
     kFunctionIsAccessor                         = 1 << 6, // function is a property getter or setter
     kFunctionHasNonThisStmt                     = 1 << 7,
     kFunctionStrictMode                         = 1 << 8,
@@ -279,7 +279,7 @@ public:
     void SetHasDestructuringPattern(bool set = true) { SetFlags(kFunctionHasDestructuringPattern, set); }
     void SetHasHeapArguments(bool set = true) { SetFlags(kFunctionHasHeapArguments, set); }
     void SetHasNonThisStmt(bool set = true) { SetFlags(kFunctionHasNonThisStmt, set); }
-    void SetHasReferenceableBuiltInArguments(bool set = true) { SetFlags(kFunctionHasReferencableBuiltInArguments, set); }
+    void SetHasReferenceableBuiltInArguments(bool set = true) { SetFlags(kFunctionHasReferenceableBuiltInArguments, set); }
     void SetHasSuperReference(bool set = true) { SetFlags(kFunctionHasSuperReference, set); }
     void SetHasDirectSuper(bool set = true) { SetFlags(kFunctionHasDirectSuper, set); }
     void SetHasNewTargetReferene(bool set = true) { SetFlags(kFunctionHasNewTargetReference, set); }
@@ -311,7 +311,7 @@ public:
     bool HasDestructuringPattern() const { return HasFlags(kFunctionHasDestructuringPattern); }
     bool HasHeapArguments() const { return true; /* HasFlags(kFunctionHasHeapArguments); Disabling stack arguments. Always return HeapArguments as True */ }
     bool HasOnlyThisStmts() const { return !HasFlags(kFunctionHasNonThisStmt); }
-    bool HasReferenceableBuiltInArguments() const { return HasFlags(kFunctionHasReferencableBuiltInArguments); }
+    bool HasReferenceableBuiltInArguments() const { return HasFlags(kFunctionHasReferenceableBuiltInArguments); }
     bool HasSuperReference() const { return HasFlags(kFunctionHasSuperReference); }
     bool HasDirectSuper() const { return HasFlags(kFunctionHasDirectSuper); }
     bool HasNewTargetReference() const { return HasFlags(kFunctionHasNewTargetReference); }

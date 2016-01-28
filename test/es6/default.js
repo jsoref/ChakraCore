@@ -106,7 +106,7 @@ var tests = [
       assert.throws(function () { eval("function foo(a = eval('b'), b) {}; foo();"); }, ReferenceError, "Future default references using eval are not allowed", "Use before declaration");
 
       function argsFoo(a = (arguments[1] = 5), b) { return b };
-      assert.areEqual(undefined, argsFoo(),     "Unevaluated parameters are referencable using the arguments object");
+      assert.areEqual(undefined, argsFoo(),     "Unevaluated parameters are referenceable using the arguments object");
       assert.areEqual(undefined, argsFoo(1),    "Side effects on the arguments object are allowed but has no effect on default parameter initialization");
       assert.areEqual(2,         argsFoo(1, 2), "Side effects on the arguments object are allowed but has no effect on default parameter initialization");
     }
