@@ -233,7 +233,7 @@ var tests = [
             assert.areEqual("", s.repeat(0), "multi-character string repeated zero times is the empty string");
             assert.areEqual("", s.repeat(NaN), "multi-character string: NaN converts to zero so produces the empty string");
             assert.areEqual("abc", s.repeat(1), "multi-character string repeated once is itself");
-            assert.areEqual("abcabc", s.repeat(2), "3 character string repeated twice is is a six character string");
+            assert.areEqual("abcabc", s.repeat(2), "3 character string repeated twice is a six character string");
             assert.areEqual("abc", s.repeat(10), "3 character string repeated ten times is a 30 character string");
 
             assert.throws(function () { s.repeat(-1); }, RangeError, "negative repeat counts are out of range", "String.prototype.repeat: argument out of range");
