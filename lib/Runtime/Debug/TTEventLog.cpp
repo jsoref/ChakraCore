@@ -2545,7 +2545,7 @@ namespace TTD
 
         writer.WriteSequenceStart_DefaultKey(NSTokens::Separator::CommaSeparator);
         writer.AdjustIndent(1);
-        writer.WriteSeperator(NSTokens::Separator::BigSpaceSeparator);
+        writer.WriteSeparator(NSTokens::Separator::BigSpaceSeparator);
         for(auto iter = this->m_eventList.GetIteratorAtFirst(); iter.IsValid(); iter.MoveNext())
         {
             const NSLogEvents::EventLogEntry* evt = iter.Current();
@@ -2581,7 +2581,7 @@ namespace TTD
                 {
                     writer.AdjustIndent(1);
 
-                    writer.WriteSeperator(NSTokens::Separator::BigSpaceSeparator);
+                    writer.WriteSeparator(NSTokens::Separator::BigSpaceSeparator);
                     firstElem = true;
                 }
             }
@@ -2593,7 +2593,7 @@ namespace TTD
                 if(!isJsRTCall & !isExternalCall & !isRegisterCall)
                 {
                     writer.AdjustIndent(-1);
-                    writer.WriteSeperator(NSTokens::Separator::BigSpaceSeparator);
+                    writer.WriteSeparator(NSTokens::Separator::BigSpaceSeparator);
                 }
                 writer.WriteSequenceEnd();
 
