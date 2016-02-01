@@ -133,8 +133,8 @@ var tests = [
             assert.areEqual(undefined, a[0]);
             assert.areEqual(undefined, a[4294967294], "confirm 4294967294 is now empty after shift");
             assert.areEqual(2, a[4294967293], "confirm 4294967293 now has contents of index 4294967294 after shift");
-            assert.areEqual(3, a[4294967295], "confirm index 4294967295 does not shift because it past array length max");
-            assert.areEqual(4, a[4294967296], "confirm index 4294967296 does not shift because it past array length max");
+            assert.areEqual(3, a[4294967295], "confirm index 4294967295 does not shift because it is past array length max");
+            assert.areEqual(4, a[4294967296], "confirm index 4294967296 does not shift because it is past array length max");
 
             Array.prototype.shift.call(o32);
             assert.areEqual(0, o32[0], "confirm length does not get converted to 4294967295");
