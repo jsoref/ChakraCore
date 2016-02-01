@@ -233,7 +233,7 @@ struct PnFnc
 
     unsigned int fncFlags;
     long astSize;
-    size_t cbMin; // Min an Lim UTF8 offsets.
+    size_t cbMin; // Min an (??) Lim UTF8 offsets.
     size_t cbLim;
     ULONG lineNumber;   // Line number relative to the current source buffer of the function declaration.
     ULONG columnNumber; // Column number of the declaration.

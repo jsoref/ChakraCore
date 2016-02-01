@@ -346,7 +346,7 @@ Peeps::PeepAssign(IR::Instr *assign)
         }
         else
         {
-            // We could copy the a of the src, but we don't have
+            // We could copy the a [address?] of the src, but we don't have
             // a way to track 2 regs on the sym...  So let's just clear
             // the info of the dst.
             RegNum dstReg = dst->AsRegOpnd()->GetReg();

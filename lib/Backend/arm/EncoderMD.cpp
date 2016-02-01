@@ -2323,7 +2323,7 @@ EncoderMD::ApplyRelocs(uint32 codeBufferAddress)
                 }
                 else
                 {
-                    //This is a encoded low 16 bits.
+                    //This is an encoded low 16 bits [something].
                     pcrel = labelInstr->GetOffset() & 0xFFFF;
                 }
                 if (!EncodeImmediate16(pcrel, (DWORD*) &encode))
@@ -2346,7 +2346,7 @@ EncoderMD::ApplyRelocs(uint32 codeBufferAddress)
                 }
                 else
                 {
-                    //This is a encoded high 16 bits.
+                    //This is an encoded high 16 bits [something].
                     pcrel = labelInstr->GetOffset() >> 16;
                 }
                 if (!EncodeImmediate16(pcrel, (DWORD*) &encode))
