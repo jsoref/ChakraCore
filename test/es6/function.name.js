@@ -694,8 +694,8 @@ var tests = [
             var classASymbolSet = Object.getOwnPropertyDescriptor(A.prototype, namedSym).set;
             var classASymbolGet = Object.getOwnPropertyDescriptor(A.prototype, namedSym).get;
 
-            assert.areEqual("get [test]",classASymbolGet.name, " should not throw b\c of toString call on symbol");
-            assert.areEqual("set [test]",classASymbolSet.name, " should not throw b\c of toString call on symbol");
+            assert.areEqual("get [test]",classASymbolGet.name, " should not throw because of toString call on symbol");
+            assert.areEqual("set [test]",classASymbolSet.name, " should not throw because of toString call on symbol");
 
             class B {
                 set [anonSym](_) {}
@@ -704,8 +704,8 @@ var tests = [
             var classBSymbolSet = Object.getOwnPropertyDescriptor(B.prototype, anonSym).set;
             var classBSymbolGet = Object.getOwnPropertyDescriptor(B.prototype, anonSym).get;
 
-            assert.areEqual("get ",classBSymbolGet.name, " should not throw b\c of toString call on symbol");
-            assert.areEqual("set ",classBSymbolSet.name, " should not throw b\c of toString call on symbol");
+            assert.areEqual("get ",classBSymbolGet.name, " should not throw because of toString call on symbol");
+            assert.areEqual("set ",classBSymbolSet.name, " should not throw because of toString call on symbol");
 
         }
     },
