@@ -1145,7 +1145,7 @@ ObjectTemp::ProcessInstr(IR::Instr * instr)
         case IR::JnHelperMethod::HelperString_Match:
         case IR::JnHelperMethod::HelperString_Replace:
         {
-            // First (non-this) parameter is either an regexp or search string.
+            // First (non-this) parameter is either a regexp or search string.
             // It doesn't escape.
             IR::Instr * instrArgDef;
             instr->FindCallArgumentOpnd(2, &instrArgDef);
@@ -1292,7 +1292,7 @@ ObjectTempVerify::IsTempTransfer(IR::Instr * instr)
         if (!instr->dstIsTempObject && instr->GetDst() && instr->GetDst()->IsRegOpnd()
           && instr->GetDst()->AsRegOpnd()->GetValueType().IsNotObject())
         {
-            // Globopt has proved that dst is not a object, so this is not really an object transfer.
+            // Globopt has proved that dst is not an object, so this is not really an object transfer.
             // This prevents the case where glob opt turned a Conv_Num to Ld_A and expose additional
             // transfer.
             return false;
@@ -1331,7 +1331,7 @@ ObjectTempVerify::ProcessInstr(IR::Instr * instr, BackwardPass * backwardPass)
         case IR::JnHelperMethod::HelperString_Match:
         case IR::JnHelperMethod::HelperString_Replace:
         {
-            // First (non-this) parameter is either an regexp or search string
+            // First (non-this) parameter is either a regexp or search string
             // It doesn't escape
             IR::Instr * instrArgDef;
             instr->FindCallArgumentOpnd(2, &instrArgDef);

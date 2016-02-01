@@ -28,7 +28,7 @@ Instr::IsEntryInstr() const
 ///
 /// Instr::AsEntryInstr
 ///
-///     Return this as a EntryInstr *
+///     Return this as an EntryInstr *
 ///
 ///----------------------------------------------------------------------------
 
@@ -56,7 +56,7 @@ Instr::IsExitInstr() const
 ///
 /// Instr::AsExitInstr
 ///
-///     Return this as a ExitInstr *
+///     Return this as an ExitInstr *
 ///
 ///----------------------------------------------------------------------------
 

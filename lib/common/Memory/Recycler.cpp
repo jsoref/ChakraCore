@@ -5752,7 +5752,7 @@ Recycler::ShouldIdleCollectOnExit()
         CUSTOM_PHASE_PRINT_VERBOSE_TRACE1(GetRecyclerFlagsTable(), Js::IdleCollectPhase, L"%04X> Skipping scheduling Idle Collect. Reason: Collection in progress\n", ::GetCurrentThreadId());
 #endif
 
-        // Don't schedule a idle collect if there is a collection going on already
+        // Don't schedule an idle collect if there is a collection going on already
         // IDLE-GC-TODO: Fix ResetHeuristics in the GC so we can detect memory allocation during
         // the concurrent collect and still schedule an idle collect
         return false;

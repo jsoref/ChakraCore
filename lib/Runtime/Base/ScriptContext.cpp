@@ -3802,7 +3802,7 @@ namespace Js
 
     HRESULT ScriptContext::OnScriptCompiled(PROFILER_TOKEN scriptId, PROFILER_SCRIPT_TYPE type, IUnknown *pIDebugDocumentContext)
     {
-        // TODO : can we do a delay send of these events or can we send a event before doing all this stuff that could calculate overhead?
+        // TODO : can we do a delay send of these events or can we send an event before doing all this stuff that could calculate overhead?
         Assert(m_pProfileCallback != NULL);
 
         OUTPUT_TRACE(Js::ScriptProfilerPhase, L"ScriptContext::OnScriptCompiled scriptId : %d, ScriptType : %d\n", scriptId, type);

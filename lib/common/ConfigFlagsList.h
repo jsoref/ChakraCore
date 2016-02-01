@@ -797,7 +797,7 @@ FLAGNR(Boolean, CloneInlinedPolymorphicCaches, "Clones polymorphic inline caches
 FLAGNR(Boolean, ConcurrentRuntime     , "Enable Concurrent GC and background JIT when creating runtime", DEFAULT_CONFIG_ConcurrentRuntime)
 FLAGNR(Boolean, Console               , "Create console window in GUI app", false)
 FLAGNR(Boolean, ConsoleExitPause      , "Pause on exit when a console window is created in GUI app", false)
-FLAGNR(Number,  ConstructorInlineThreshold      , "Maximum size in bytecodes of an constructor inline candidate with monomorphic field access", DEFAULT_CONFIG_ConstructorInlineThreshold)
+FLAGNR(Number,  ConstructorInlineThreshold      , "Maximum size in bytecodes of a constructor inline candidate with monomorphic field access", DEFAULT_CONFIG_ConstructorInlineThreshold)
 FLAGNR(Number,  ConstructorCallsRequiredToFinalizeCachedType, "Number of calls to a constructor required before the type cached in the constructor cache is finalized", DEFAULT_CONFIG_ConstructorCallsRequiredToFinalizeCachedType)
 #ifdef SECURITY_TESTING
 FLAGNR(Boolean, CrashOnException      , "Removes the top-level exception handler, allowing jc.exe to crash on an unhandled exception.  No effect on IE. (default: false)", false)
@@ -1029,7 +1029,7 @@ FLAGNR(Number,  MaxNumberOfInlineesWithLoop, "Number of times to allow inlinees 
 #ifdef MEMSPECT_TRACKING
 FLAGNR(Phases,  Memspect,              "Enables memspect tracking to perform memory investigations.", )
 #endif
-FLAGNR(Number,  PolymorphicInlineThreshold     , "Maximum size in bytecodes of an polymorphic inline candidate", DEFAULT_CONFIG_PolymorphicInlineThreshold)
+FLAGNR(Number,  PolymorphicInlineThreshold     , "Maximum size in bytecodes of a polymorphic inline candidate", DEFAULT_CONFIG_PolymorphicInlineThreshold)
 FLAGNR(Boolean, PrimeRecycler         , "Prime the recycler first", DEFAULT_CONFIG_PrimeRecycler)
 #if defined(CHECK_MEMORY_LEAK) || defined(LEAK_REPORT)
 FLAGNR(Boolean, LeakStackTrace ,        "Include stack trace on leaked pinned object and heap objects", false)

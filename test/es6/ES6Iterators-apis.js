@@ -207,9 +207,9 @@ var tests = [
 
             assert.areEqual("Map Iterator", mip[Symbol.toStringTag], "@@toStringTag is the string value 'Map Iterator'");
 
-            assert.throws(function () { mip.next.call(123); }, TypeError, "%MapIteratorPrototype%.next() throws if its 'this' is not an object", "Map Iterator.prototype.next: 'this' is not an Map Iterator object");
-            assert.throws(function () { mip.next.call("o"); }, TypeError, "%MapIteratorPrototype%.next() throws if its 'this' is not an object", "Map Iterator.prototype.next: 'this' is not an Map Iterator object");
-            assert.throws(function () { mip.next.call({ }); }, TypeError, "%MapIteratorPrototype%.next() throws if its 'this' is an object but not an Map Iterator object", "Map Iterator.prototype.next: 'this' is not an Map Iterator object");
+            assert.throws(function () { mip.next.call(123); }, TypeError, "%MapIteratorPrototype%.next() throws if its 'this' is not an object", "Map Iterator.prototype.next: 'this' is not a Map Iterator object");
+            assert.throws(function () { mip.next.call("o"); }, TypeError, "%MapIteratorPrototype%.next() throws if its 'this' is not an object", "Map Iterator.prototype.next: 'this' is not a Map Iterator object");
+            assert.throws(function () { mip.next.call({ }); }, TypeError, "%MapIteratorPrototype%.next() throws if its 'this' is an object but not a Map Iterator object", "Map Iterator.prototype.next: 'this' is not a Map Iterator object");
         }
     },
     {
@@ -225,9 +225,9 @@ var tests = [
 
             assert.areEqual("Set Iterator", sip[Symbol.toStringTag], "@@toStringTag is the string value 'Set Iterator'");
 
-            assert.throws(function () { sip.next.call(123); }, TypeError, "%SetIteratorPrototype%.next() throws if its 'this' is not an object", "Set Iterator.prototype.next: 'this' is not an Set Iterator object");
-            assert.throws(function () { sip.next.call("o"); }, TypeError, "%SetIteratorPrototype%.next() throws if its 'this' is not an object", "Set Iterator.prototype.next: 'this' is not an Set Iterator object");
-            assert.throws(function () { sip.next.call({ }); }, TypeError, "%SetIteratorPrototype%.next() throws if its 'this' is an object but not an Set Iterator object", "Set Iterator.prototype.next: 'this' is not an Set Iterator object");
+            assert.throws(function () { sip.next.call(123); }, TypeError, "%SetIteratorPrototype%.next() throws if its 'this' is not an object", "Set Iterator.prototype.next: 'this' is not a Set Iterator object");
+            assert.throws(function () { sip.next.call("o"); }, TypeError, "%SetIteratorPrototype%.next() throws if its 'this' is not an object", "Set Iterator.prototype.next: 'this' is not a Set Iterator object");
+            assert.throws(function () { sip.next.call({ }); }, TypeError, "%SetIteratorPrototype%.next() throws if its 'this' is an object but not a Set Iterator object", "Set Iterator.prototype.next: 'this' is not a Set Iterator object");
         }
     },
     {
@@ -243,9 +243,9 @@ var tests = [
 
             assert.areEqual("String Iterator", sip[Symbol.toStringTag], "@@toStringTag is the string value 'String Iterator'");
 
-            assert.throws(function () { sip.next.call(123); }, TypeError, "%StringIteratorPrototype%.next() throws if its 'this' is not an object", "String Iterator.prototype.next: 'this' is not an String Iterator object");
-            assert.throws(function () { sip.next.call("o"); }, TypeError, "%StringIteratorPrototype%.next() throws if its 'this' is not an object", "String Iterator.prototype.next: 'this' is not an String Iterator object");
-            assert.throws(function () { sip.next.call({ }); }, TypeError, "%StringIteratorPrototype%.next() throws if its 'this' is an object but not an String Iterator object", "String Iterator.prototype.next: 'this' is not an String Iterator object");
+            assert.throws(function () { sip.next.call(123); }, TypeError, "%StringIteratorPrototype%.next() throws if its 'this' is not an object", "String Iterator.prototype.next: 'this' is not a String Iterator object");
+            assert.throws(function () { sip.next.call("o"); }, TypeError, "%StringIteratorPrototype%.next() throws if its 'this' is not an object", "String Iterator.prototype.next: 'this' is not a String Iterator object");
+            assert.throws(function () { sip.next.call({ }); }, TypeError, "%StringIteratorPrototype%.next() throws if its 'this' is an object but not a String Iterator object", "String Iterator.prototype.next: 'this' is not a String Iterator object");
         }
     },
     {

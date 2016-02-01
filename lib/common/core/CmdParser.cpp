@@ -13,7 +13,7 @@ using namespace Js;
 ///
 /// CmdLineArgsParser::ParseString
 ///
-///     Parses an string token. There are 2 ways to specify it.
+///     Parses a string token. There are 2 ways to specify it.
 ///         1. Quoted   - " " Any character within quotes is parsed as string.
 ///                       if the quotes are not closed, its an error.
 ///         2. UnQuoted - End of string is indicated by a space/end of stream.

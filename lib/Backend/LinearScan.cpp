@@ -793,7 +793,7 @@ LinearScan::SetDstReg(IR::Instr *instr)
 
     StackSym * stackSym = regOpnd->m_sym;
 
-    // Arg slot sym can be in an RegOpnd for param passed via registers
+    // Arg slot sym can be in a RegOpnd for param passed via registers
     // Just use the assigned register
     if (stackSym == nullptr || stackSym->IsArgSlotSym())
     {

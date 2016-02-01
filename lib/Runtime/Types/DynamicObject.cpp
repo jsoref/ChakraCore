@@ -622,7 +622,7 @@ namespace Js
         // Get type handler again, in case it got changed by SetIsPrototype.
         currentTypeHandler = this->GetTypeHandler();
 
-        // Set the object array as an prototype as well, so if it is an ES5 array, we will disable the array set element fast path
+        // Set the object array as a prototype as well, so if it is an ES5 array, we will disable the array set element fast path
         ArrayObject * objectArray = this->GetObjectArray();
         if (objectArray)
         {

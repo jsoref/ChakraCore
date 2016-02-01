@@ -907,7 +907,7 @@ namespace Js
             RemoveVectoredExceptionHandler(vectoredExceptionHandler);
 
             // remove the handler from the list second time. 
-            // This code is called inside a exception handler, when the exception handler is called, 
+            // This code is called inside an exception handler, when the exception handler is called, 
             // the refcount of the handler in ntdll!LdrpVectorHandlerList is increased, 
             // so need to call RemoveVectoredExceptionHandler twice to really remove the handler from the list
             // otherwise the exception from the handler itself will re-enter the handler

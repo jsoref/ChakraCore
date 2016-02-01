@@ -947,7 +947,7 @@ namespace Js
             {
                 //
                 // First element is not int/double
-                // create a array of length 1.
+                // create an array of length 1.
                 // Set first element as the passed Var
                 //
 
@@ -4502,7 +4502,7 @@ Case0:
     *   -   Returns int32 value from the array.
     *   -   Returns missing item when the element is not available in the array object.
     *   -   It doesn't walk up the prototype chain.
-    *   -   Length is decremented only if it pops a int32 element, in all other cases - we bail out from the jitted code.
+    *   -   Length is decremented only if it pops an int32 element, in all other cases - we bail out from the jitted code.
     *   -   This api cannot cause any implicit call and hence do not need implicit call bailout test around this api
     */
     int32 JavascriptNativeIntArray::Pop(ScriptContext * scriptContext, Var object)

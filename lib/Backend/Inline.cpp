@@ -1961,7 +1961,7 @@ Inline::InlineBuiltInFunction(IR::Instr *callInstr, Js::FunctionInfo *funcInfo, 
         inlineBuiltInEndInstr = InsertInlineeBuiltInStartEndTags(callInstr, actualCount);
 
         // InlineArrayPop - TrackCalls Need to be done at InlineArrayPop and not at the InlineBuiltInEnd
-        // Hence we use a new opcode, to detect that it is a InlineArrayPop and we don't track the call during End of inlineBuiltInCall sequence
+        // Hence we use a new opcode, to detect that it is an InlineArrayPop and we don't track the call during End of inlineBuiltInCall sequence
         if(inlineCallOpCode == Js::OpCode::InlineArrayPop)
         {
             inlineBuiltInEndInstr->m_opcode = Js::OpCode::InlineNonTrackingBuiltInEnd;

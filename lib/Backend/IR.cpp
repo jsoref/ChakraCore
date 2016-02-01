@@ -3662,7 +3662,7 @@ bool Instr::BinaryCalculator(IntConstType src1Const, IntConstType src2Const, Int
         IntConstMath::ShrU(src1Const, src2Const & 0x1F, &value);
         if (value < 0)
         {
-            // ShrU produces a UInt32.  If it doesn't fit in a Int32, bail as we don't
+            // ShrU produces a UInt32.  If it doesn't fit in an Int32, bail as we don't
             // track signs of int values.
             return false;
         }

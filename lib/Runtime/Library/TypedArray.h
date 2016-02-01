@@ -398,7 +398,7 @@ namespace Js
         }
     };
 
-    // in windows build environment, wchar_t is not a intrinsic type, and we cannot do the type
+    // in windows build environment, wchar_t is not an intrinsic type, and we cannot do the type
     // specialization
     class CharArray : public TypedArrayBase
     {

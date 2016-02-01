@@ -2777,7 +2777,7 @@ namespace Js
                 regex::Interval* pSourceSpan = &(statementMaps->Item(i)->sourceSpan);
                 if (FunctionBody::IsDummyGlobalRetStatement(pSourceSpan))
                 {
-                    // Workaround for handling global return, which is a empty range.
+                    // Workaround for handling global return, which is an empty range.
                     continue;
                 }
 

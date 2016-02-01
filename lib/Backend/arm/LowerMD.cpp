@@ -3509,7 +3509,7 @@ IR::Instr * LowererMD::GenerateConvBool(IR::Instr *instr)
 /// LowererMD::GenerateFastAdd
 ///
 /// NOTE: We assume that only the sum of two Int31's will have 0x2 set. This
-/// is only true until we have an var type with tag == 0x2.
+/// is only true until we have a var type with tag == 0x2.
 ///
 ///----------------------------------------------------------------------------
 
@@ -6086,7 +6086,7 @@ LowererMD::LoadCheckedFloat(
     IR::Instr *instrInsert,
     const bool checkForNullInLoopBody)
 {
-    // Load one floating-point var into an VFP register, inserting checks to see if it's really a float:
+    // Load one floating-point var into a VFP register, inserting checks to see if it's really a float:
     // Rx = ASRS src, 1
     //      BCC $non-int
     // Dx = VMOV Rx
