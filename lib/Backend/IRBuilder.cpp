@@ -6663,7 +6663,7 @@ IRBuilder::EnsureConsumeBranchIsland()
             ConsumeBranchIsland();
 
             // Mark the virtual branch around as a redirect long branch as well
-            // so that if it is the target of another branch, it will just keep pass
+            // so that if it is the target of another branch, it will just keep skipping
             // the branch island
             Assert(longBranchMap);
             Assert(offset < m_offsetToInstructionCount);
