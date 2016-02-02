@@ -1640,7 +1640,7 @@ LowererMDArch::GeneratePrologueStackProbe(IR::Instr *entryInstr, IntConstType fr
         insertInstr->InsertBefore(instr);
         Security::InsertRandomFunctionPad(insertInstr);
 
-        // This is generated after layout.   Generate the block at the end of the function manually
+        // This is generated after layout. Generate the block at the end of the function manually
         insertInstr = IR::PragmaInstr::New(Js::OpCode::StatementBoundary, Js::Constants::NoStatementIndex, m_func);
 
         this->m_func->m_tailInstr->InsertAfter(insertInstr);
