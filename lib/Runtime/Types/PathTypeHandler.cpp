@@ -978,7 +978,7 @@ namespace Js
             }
             typeHandler->Add(propertyRecord, attributes, scriptContext);
         }
-        AssertMsg((typeHandler->GetFlags() & IsPrototypeFlag) == 0, "Why does a newly created type handler have a IsPrototypeFlag set?");
+        AssertMsg((typeHandler->GetFlags() & IsPrototypeFlag) == 0, "Why does a newly created type handler have the IsPrototypeFlag set?");
 
  #ifdef PROFILE_OBJECT_LITERALS
         scriptContext->objectLiteralSimpleDictionaryCount++;
